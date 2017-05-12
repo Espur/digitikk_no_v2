@@ -1,0 +1,547 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/* RESET CSS BEGIN */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Lato', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*RESET CSS END*/
+
+
+/* HELPER CLASSES BEGIN */
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+p,
+ul li,
+ol li {
+    font-size: 17px;
+    line-height: 24px;
+}
+
+/*HELPER CLASSES END*/
+
+
+/* GENERAL RULES*/
+* {
+   box-sizing: border-box; 
+}
+
+/* HERO SECTION */
+
+
+#hero {
+    background-image: linear-gradient(rgba(114, 176, 29, 1), rgba(0, 0, 0, 0.6)), url(aalesund.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 980px;
+
+}
+
+.nav-logo img {
+    height: 70px;
+}
+
+.nav-content li {
+    color: white;
+    display: inline-block;
+    padding: 20px 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+#hero h1 {
+    font-size: 93px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#hero h2 {
+    font-size: 34px;
+    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 40px;
+}
+
+.cta-text {
+    margin-top: 250px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.cta {
+    margin-top: 140px;
+}
+
+.cta-img img {
+    height: 450px;
+    margin-left: 70px
+}
+
+#hero a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+}
+
+#hero .btn-left, .btn-right {
+    background: transparent;
+    border: 3px solid white;
+}
+
+
+/* ABOUT SECTION */
+
+
+#about img {
+    height: 550px;
+}
+
+#about {
+    margin-bottom: -3px;
+}
+
+#about h3 {
+    font-size: 65px;
+    margin-top: 70px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #454955;
+    margin-bottom: 80px;
+}
+
+#about p {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 70px;
+    color: #7a7a7a;
+}
+
+#about li {
+    font-size: 16px;
+    font-family: 'Dosis', sans-serif;
+    padding: 20px;
+    width: 45%;
+    color: #7a7a7a;
+    padding-bottom: 10px;
+    
+}
+
+#about i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+ul hr {
+    width: 35%;
+    margin-right: 350px
+}
+
+#about ul {
+    width: 80%;
+    position: absolute;
+}
+
+.values-right {
+    margin-left: 300px
+}
+
+
+
+
+/* SERVICES SECTION */
+
+
+
+#services h3 {
+    font-size: 85px;
+    margin-top: 90px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 80px;
+    text-shadow: 4px 3px #000
+}
+
+#services {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(DSC03368.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#services .col-1, #services .col-2, #services .col-3 {
+    background-color: #f6f8f2;
+    padding: 0px 20px;
+    width: 32%;
+    margin: 7px;
+    -webkit-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+#services .col-1:hover, #services .col-2:hover, #services .col-3:hover, #services .col-md-12:hover {
+    background-color: white;
+    color: #72b01d;
+    transition: 0.3s;
+}
+
+#services h4 {
+    font-size: 30px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+}
+
+#services .fa {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.i-bg-small {
+    background-color: #72b01d;
+    margin: 0px 130px;
+    border-radius: 50px;
+    margin-top: 30px
+}
+
+
+.i-bg-big {
+    background-color: #72b01d;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-left: 220px;
+    margin-right: 220px
+}
+
+#services h4 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#services .col-md-12 {
+    background-color: #f6f8f2;
+    margin-top: 7px;
+    width: 98.8%;
+    margin-left: 5px;
+    margin-bottom: 50px;
+    -webkit-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+#services .btn-primary {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-decoration: none;
+    background-color: #72b01d;
+    color: white;
+    border-radius: 30px;
+    position: relative;
+    border: 2px solid white;
+    transition: 0.2s;
+}
+
+#services .btn-primary:hover {
+    color: #3f7d20;
+    background-color: white;
+    border: 2px solid #3f7d20;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+#services a {
+    padding: 15px;
+    font-size: 15px;
+}
+
+#services .btn-success {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 185px;
+    margin-right: 185px;
+    text-decoration: none;
+    background-color: #72b01d;
+    color: white;
+    border-radius: 30px;
+    position: relative;
+    border: 2px solid white;
+    transition: 0.2s;
+}
+
+#services .btn-success:hover {
+    color: #3f7d20;
+    background-color: white;
+    border: 2px solid #3f7d20;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+#services .col-1 p, #services .col-2 p, #services .col-3 p, #services .col-md-12 p {
+    font-size: 17px;
+    line-height: 27px;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+
+
+/* PORTFOLIO SECTION */
+
+#portfolio {
+    background-color: #f6f8f2;
+}
+
+#portfolio h3 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 65px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 80px;
+    margin-bottom: 15px;
+}
+
+.portfolio-info {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 200;
+    margin-bottom: 120px
+}
+
+#portfolio .i-bg i {
+    color: white;
+    font-size: 40px;
+}
+
+#portfolio .fa {
+    
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+
+#portfolio .fa-code {
+    background-color: #72b01d;
+}
+
+#portfolio .fa-film {
+    background-color: #009cd9
+}
+
+#portfolio .fa-camera-retro {
+    background-color: #70798c;
+}
+
+#portfolio .fa-pencil {
+    background-color: #d90429;
+}
+
+#portfolio .fa-youtube {
+    background-color: #252323;
+}
+
+#portfolio .cv {
+    background-color: #9bc1bc;
+    color: white;
+    border-radius: 50px;
+    width: 40%;
+    padding: 15px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.bg-with-txt {
+    height: 250px;
+    position: relative;
+}
+
+#portfolio hr {
+    width: 97.5%;
+    margin-bottom: 30px;
+}
+
+#portfolio .category {
+    margin-bottom: 30px;
+}
+
+#portfolio .img-txt {
+    text-decoration: none;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    text-shadow: 2px 2px #000;
+    transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #72b01d;
+}
+
+.overlay:hover {
+    opacity: 0.9;
+}
+
+
+
+.bg-with-txt img {
+    height: 250px;
+    width: 100%;
+}
+
+.portfolio-row {
+    margin-bottom: 100px;
+}
+
+
+/* ICONS SECTION */
+
+
+#icons i {
+    color: #3f7d20;
+    font-size: 80px;
+    padding: 40px;
+    background-color: white;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    transition: 0.2s;
+    
+}
+
+#icons i:hover {
+    transition: 0.2s;
+    color: white;
+    background-color: #3f7d20;
+}
+
+#icons h4 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 27px;
+    color: #a0a2a5;
+    font-weight: 300;
+    margin-bottom: 90px;
+}

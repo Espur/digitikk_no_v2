@@ -9,7 +9,7 @@
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="nav-logo pull-left">
-                <img src="logo/BITMAP/POSITIV/PNG/left-logo-long-text.png">
+                <%= image_tag("left-logo-long-text.png") %>
             </div>
             <div class="nav-content pull-right">
                 <ul class="nav">
@@ -32,7 +32,7 @@
                 <a href="#" class="btn-right">Portfolio</a>
             </div>
             <div class="cta-img">
-                <img src="img/sliced/macs_edited_new.png">
+                <%= image_tag("macs_edited_new.png") %>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
                 </ul>
             </div>
             <div class="col-md-6 col-right text-right">
-                <img src="img/sliced/esp_png.png">
+                <%= image_tag("esp_png.png") %>
             </div>
         </div>
     </div>
@@ -149,7 +149,7 @@
                 <div class="col-md-3">
                     <a href="#">
                         <div class="bg-with-txt fruitcake">
-                            <img src="img/portfolio/fruitcake.png">
+                            <%= image_tag("fruitcake.png") %>
                             <div class="overlay">
                                 <p class="img-txt">Fruitcake</p>
                             </div>
@@ -157,13 +157,34 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#"><div class="bg-with-txt amazing"><p class="img-txt">Landing Page</p></div></a>
+                    <a href="#">
+                        <div class="bg-with-txt amazing">
+                            <%= image_tag("amazign.png") %>
+                            <div class="overlay">
+                                <p class="img-txt">Landing Page</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#"><div class="bg-with-txt dev-match"><p class="img-txt">Dev Match</p></div></a>
+                    <a href="#">
+                        <div class="bg-with-txt dev-match">
+                            <%= image_tag("devmatch.png") %>
+                            <div class="overlay">
+                                <p class="img-txt">Dev Match</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#"><div class="bg-with-txt ms-ub"><p class="img-txt">Medie Spesialisten UB</p></div></a>
+                    <a href="#">
+                        <div class="bg-with-txt ms-ub">
+                            <%= image_tag("msub.png") %>
+                            <div class="overlay">
+                                <p class="img-txt">Medie Spesialisten UB</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -198,7 +219,12 @@
         <div class="row">
             <h4>Kontakt Digitikk</h4>
             <div class="col-md-6 col-left">
-            
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
