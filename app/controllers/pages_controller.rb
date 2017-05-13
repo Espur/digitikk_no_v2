@@ -7,6 +7,12 @@ class PagesController < ApplicationController
         @contact = Contact.new(contact_params)
             
         if @contact.save
+            navn = params[:contact][:navn]
+            epost = params[:contact][:epost]
+            body = params[:contact][:comments]
+            
+            ContactMailer.contact_email(navn, epost, body).deliver
+            
             flash[:success] = 'Takk for din henvendelse.'
             redirect_to root_path
         else
