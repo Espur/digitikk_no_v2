@@ -24,6 +24,9 @@
     </nav>
     
     <div class="container">
+        <% flash.each do |key, value| %>
+            <%= content_tag :div, value, class: "alert alert-#{key}" %>
+        <% end %>
         <div class="cta text-center">
             <div class="cta-text">
                 <h1>Vestad Web og Media</h1>
@@ -219,12 +222,23 @@
         <div class="row">
             <h4>Kontakt Digitikk</h4>
             <div class="col-md-6 col-left">
-                <form>
+                <%= form_for @contact, url: contact_pages_path do |f| %>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <%= f.label :navn %>
+                        <%= f.text_field :navn, class: 'form-control' %>
                     </div>
-                </form>
+                    
+                    <div class="form-group">
+                        <%= f.label :epost %>
+                        <%= f.email_field :epost, class: 'form-control' %>
+                    </div>
+                    
+                    <div class="form-group">
+                        <%= f.label :comments %>
+                        <%= f.text_area :comments, class: 'form-control' %>
+                    </div>
+                    <%= f.submit 'Send Inn', class: 'btn btn-success'  %>
+                <% end %>
             </div>
         </div>
     </div>

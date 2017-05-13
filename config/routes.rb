@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
   
-  
+  resources :pages do
+    post :contact, on: :collection
+  end
   
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
