@@ -125,7 +125,7 @@ ol li {
 
 
 #hero {
-    background-image: linear-gradient(rgba(114, 176, 29, 1), rgba(0, 0, 0, 0.6)), url(aalesund.png);
+    background-image: linear-gradient(rgba(114, 176, 29, 1), rgba(0, 0, 0, 0.6)), image-url("aalesund.png");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -264,7 +264,7 @@ ul hr {
 }
 
 #services {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(DSC03368.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image-url("DSC03368.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
