@@ -217,11 +217,13 @@
     </div>
 </section>
 
-<section id="footer">
+<section id="contact">
     <div class="container">
-        <div class="row">
-            <h4>Kontakt Digitikk</h4>
-            <div class="col-md-6 col-left">
+        <div class="row contact-row">
+            <h3 class="contact-title">Kontakt Digitikk</h3>
+            <p>Du vil få svar fortløpende</p>
+            <%= image_tag("left-logo-long-text.png", class: 'contact-logo') %>
+            <div class="col-md-4 col-left">
                 <%= form_for @contact, url: contact_pages_path do |f| %>
                     <div class="form-group">
                         <%= f.label :navn %>
@@ -240,6 +242,32 @@
                     <%= f.submit 'Send Inn', class: 'btn btn-success'  %>
                 <% end %>
             </div>
+            
+            <div class="col-md-4 col-middle">
+                <div id="map"></div>
+            </div>
+            
+            <div class="col-md-4 col-right">
+                <ul class="contact-icons">
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i><strong>Epost: </strong> Digitikk.media@gmail.com</li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i><strong class="mobil">Mobil: </strong> 94280490</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
+
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4 text-center">
+                <p>All rights reserved &copy Vestad Web og Media 2017</br>www.digitikk.no. </br>&copy Espen Taftø Vestad</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlTHlI4vtaTg4hoqcFQ8lB2VV16E5enJg&callback=initMap">
+</script>

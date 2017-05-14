@@ -550,3 +550,88 @@ ul hr {
     font-weight: 300;
     margin-bottom: 90px;
 }
+
+
+/* CONTACT SECTION */
+
+
+#contact {
+    background-color: #454955;
+}
+
+.contact-title {
+    font-size: 65px;
+    font-family: 'Dosis', sans-seriff;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+#map {
+    height: 250px;
+    width: 100%;
+}
+
+#contact .form-control {
+    border-radius: 0px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#contact label {
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Rubik', sans-seriff;
+}
+
+#contact .btn {
+    background-color: #72b01d;
+    color: white;
+    transition: 0.2s;
+}
+
+#contact .btn:hover {
+    background-color: white;
+    color: #3f7d20;
+    transition: 0.2s;
+}
+
+#contact .col-right {
+    color: white;
+    margin-top: 40px;
+}
+
+#contact .col-right i {
+    font-size: 30px;
+    line-height: 38px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+}
+
+.col-right .mobil {
+    padding-left: 8px;
+}
+
+.contact-row {
+    margin-bottom: 70px;
+}
+
+.contact-logo {
+    height: 70px;
+}
+
+#contact p {
+    color: white;
+    margin-bottom: 70px;
+}
+
+#footer p {
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+#footer {
+    background-color: #72b01d;
+    color: white;
+}
