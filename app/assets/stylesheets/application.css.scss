@@ -145,17 +145,13 @@ ol li {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
+    transition: 0.2s;
     
 }
 
-.nav-content li a {
-    border-bottom: 4px solid white transparent;
-    transition: border-bottom 0.1s, color 0.1s;
-}
-
-.nav-content li a:hover {
-    border-bottom: 4px solid white;
-    transition: border-bottom 0.1s, 0.1s;
+.nav-content li:hover {
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 #hero h1 {
@@ -185,6 +181,24 @@ ol li {
 .cta-img img {
     height: 450px;
     margin-left: 70px
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
+.txt-scroll {
+    color: #72b01d !important;
+  transition: color 200ms linear;
+}
+
+.transp {
+    opacity: 0;
+}
+
+.img-scroll {
+    -webkit-filter: saturate(3); filter: saturate(3);
 }
 
 /* #hero a {
