@@ -463,49 +463,45 @@ ul hr {
     margin-bottom: 120px
 }
 
-#portfolio .i-bg i {
-    color: white;
-    font-size: 40px;
-}
-
 #portfolio .fa {
-    
+    color: #454955;
+    font-size: 50px;
     padding: 10px;
-    border-radius: 50px;
-    border: 2px solid white;
+    transition: 0.2s;
 }
 
-#portfolio .fa-code {
-    background-color: #72b01d;
+#portfolio .fa:hover {
+    color: #3f7d21;
+    transition: 0.2s;
+    font-size: 55px;
+    font-weight: 500;
 }
 
-#portfolio .fa-film {
-    background-color: #009cd9
+#portfolio span p {
+    font-family: 'Dosis', sans-seriff;
+    color: #7a7a7a;
+    margin-top: 20px;
 }
 
-#portfolio .fa-camera-retro {
-    background-color: #70798c;
-}
 
-#portfolio .fa-pencil {
-    background-color: #d90429;
-}
-
-#portfolio .fa-youtube {
-    background-color: #252323;
-}
 
 #portfolio .cv {
-    background-color: #9bc1bc;
-    color: white;
-    border-radius: 50px;
-    width: 40%;
-    padding: 15px;
+    color: #454955;
+    padding: 10px;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
-    margin-left: 50px;
-    margin-right: 50px;
+    font-size: 40px;
+    margin-top: 20px;
+    transition: 0.2s;
 }
+
+#portfolio .cv:hover {
+    color: #3f7d21;
+    font-size: 45px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
 
 .bg-with-txt {
     height: 250px;
@@ -518,7 +514,7 @@ ul hr {
 }
 
 #portfolio .category {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 #portfolio .img-txt {
