@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :orders
   
   resources :pages do
     post :contact, on: :collection
