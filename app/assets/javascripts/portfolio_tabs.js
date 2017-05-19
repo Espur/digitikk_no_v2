@@ -3,13 +3,13 @@ $(document).ready(function() {
     
     $('.code-btn').click(function() {
     $('.web').slideToggle();
-    $('.video').hide();
+    $('.video').hide('slow');
     
     });
     
     $('.video-btn').click(function() {
         $('.video').slideToggle();
-        $('.web').hide();
+        $('.web').hide('slow');
     });
     
 });
