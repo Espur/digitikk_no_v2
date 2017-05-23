@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512172802) do
+ActiveRecord::Schema.define(version: 20170519071657) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "navn"
     t.string   "epost"
     t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string   "fornavn"
+    t.string   "etternavn"
+    t.string   "email"
+    t.string   "mobil"
+    t.string   "tjeneste"
+    t.text     "beskrivelse"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
