@@ -7,7 +7,6 @@ class CreateOrders < ActiveRecord::Migration
       t.string :email
       t.string :mobil
       t.string :tjeneste
-      t.text :beskrivelse
       t.string :terms
       
       t.timestamps
