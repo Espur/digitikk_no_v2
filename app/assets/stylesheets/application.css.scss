@@ -678,3 +678,91 @@ ul hr {
     background-color: #72b01d;
     color: white;
 }
+
+
+
+/* ORDERS PAGE */
+
+
+.orders-bg {
+    background-color: #72b01d;
+    width: 100%;
+    height: 200px;
+}
+
+.orders-bg i {
+    color: white;
+    font-size: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.red {
+    color: #f72a45;
+}
+
+.green {
+    color: #00af34;
+}
+
+.orders-desc-h2 {
+    font-weight: bold;
+    font-family: 'Dosis', sans-seriff;
+    font-size: 28px;
+    padding: 20px 10px;
+}
+
+.orders-desc-p {
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.price {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.mva {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.pakketilbud {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.pakke-table td {
+    font-style: italic;
+}
+
+#web-orders td {
+    font-size: 13px;
+}
+
+.utvidet-info h2 {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-left: 14px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    color: #7a7a7a;
+    font-family: 'Dosis', sans-seriff;
+}
+
+.utvidet-info h3 {
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'Dosis', sans-seriff;
+    margin-bottom: 8px;
+}
+
+.utvidet-info p {
+    font-size: 13px;
+    line-height: 21px;
+}
+
+#web-orders, #grafisk-orders, #video-orders {
+    margin-top: 50px;
+}
