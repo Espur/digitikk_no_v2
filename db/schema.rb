@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170519071657) do
     t.string   "mobil"
     t.string   "tjeneste"
     t.text     "beskrivelse"
+    t.string   "terms"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

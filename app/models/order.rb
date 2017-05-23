@@ -5,4 +5,5 @@ class Order < ActiveRecord::Base
     validates :mobil, presence: true
     validates :tjeneste, presence: true
     validates :beskrivelse, presence: true
+    validates :terms, presence: true
 end
