@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get '/terms' => 'pages#terms'
   resources :orders
   
   resources :pages do

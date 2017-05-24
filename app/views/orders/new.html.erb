@@ -75,7 +75,6 @@
               </tr>
             </table>
             <h2 class="price green text-center">Pris: 5790,-</h2>
-            <p class="mva text-center">inkl. mva</p>
             <table class="table table-striped">
               <thead>
                 <p class="pakketilbud">Tilgjengelige pakketilbud:</p>
@@ -151,7 +150,6 @@
               </tr>
             </table>
             <h2 class="price green text-center">Pris: 8990,-</h2>
-            <p class="mva text-center">inkl. mva</p>
             <table class="table table-striped pakke-table">
               <thead>
                 <p class="pakketilbud">Tilgjengelige pakketilbud:</p>
@@ -206,29 +204,15 @@
         </div>
       </div>
     </div>
-    
-    <div class="row utvidet-info">
-      <h2>Utvidet info</h2>
-      <div class="col-md-4">
-        <h3>Lekker (Websider)</h3>
-        <p class="orders-desc-p"><strong>Lekker</strong> pakken passer perfekt til deg som er selvstendig næringsdrivende, privatperson eller driver en mindre virksomhet. Siden vil inneholde all nødvendig informasjon om dine tjenester eller produkter. Samtidig som nettsiden vil ha et interessevekkende design, vil det også være mulig for kunder å kontakte deg gjennom kontaktskjema på mail.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Fabelaktig</h3>
-        <p class="orders-desc-p"><strong>Fabelaktig</strong> er en mer fleksibel utgave av lekker pakken. Denne pakken er skreddersydd til deg som driver en større bedrfit, men passer også til de som trenger flere funskjoner. Gjennom lekker + blir det mulig for brukere å logge inn / registrere seg, lage brukerprofiler, gjennomføre betalinger og mye mer. Om ønskelig, er det også mulig å gjøre det slik at brukere kan velge mellom premium og gratis medlemskap.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Vedlikehold</h3>
-        <p class="orders-desc-p">Trenger du vedlikehold eller oppgraderinger på eksisterende nettsted eller sosiale medier? Da hjelper jeg deg gladlig! Beskriv i kontakt skjema nedenfor hvilke utfordringer du ønsker assistanse i, og vi finner en ordning på det.</p>
-      </div>
-    </div>
   </div>
 </section>
 
+
 <div class="orders-form">
   <div class="container">
+    <h2 class="text-center">Kontakt & Bestill</h2>
     <div class="row">
-      <div class="col-md-offset-4 col-md-4">
+      <div class="col-md-offset-3 col-md-6 well">
         <%= form_for @order do |f| %>
           <div class="form-group">
             <%= f.label :fornavn %>
@@ -247,21 +231,439 @@
           
           <div class="form-group">
             <%= f.label :mobil %>
-            <%= f.text_field :mobil, class: 'form-control' %>
+            <%= f.number_field :mobil, class: 'form-control' %>
           </div>
           
-          <div class="form group">
-            <%= f.label :tjeneste %>
-            <%= %>
+          <div class="btn-group">
+            <%= f.label "Tjeneste" %></br>
+            <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
           </div>
           
-          <div class="checkbox">
-            <%= f.check_box :terms %>
+          <div class="form-group">
+            <%= f.label :beskrivelse %>
+            <%= f.text_area :beskrivelse, class: 'form-control' %>
           </div>
           
-          <%= f.submit 'Send Inn', class: 'btn btn-primary' %>
+          <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
+          <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
         <% end %>
       </div>
     </div>
   </div>
 </div>
+
+
+
+<section id="web-orders-info" class="utvidet-info">
+  <h2 class="text-center">Utvidet Info</h2>
+  <div class="container-fluid lekker">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Lekker (Websider)</h3>
+          <p class="orders-desc-p"><strong>Lekker</strong> pakken passer perfekt til deg som er selvstendig næringsdrivende, privatperson eller driver en mindre virksomhet. Siden vil inneholde all nødvendig informasjon om dine tjenester eller produkter. Samtidig som nettsiden vil ha et interessevekkende design, vil det også være mulig for kunder å kontakte deg gjennom kontaktskjema på mail.</p>
+        </div>
+        <div class="col-md-offset-3 col-md-5">
+          <%= image_tag("web_design-min.png", class: 'web-design-icons') %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid fabelaktig">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag("macs_edited_new.png", class: 'web-info-mac') %>
+        </div>
+        <div class="col-md-offset-3 col-md-5">
+          <h3>Fabelaktig</h3>
+          <p class="orders-desc-p"><strong>Fabelaktig</strong> er en mer fleksibel utgave av lekker pakken. Denne pakken er skreddersydd til deg som driver en større bedrfit, men passer også til de som trenger flere funskjoner. Gjennom lekker + blir det mulig for brukere å logge inn / registrere seg, lage brukerprofiler, gjennomføre betalinger og mye mer. Om ønskelig, er det også mulig å gjøre det slik at brukere kan velge mellom premium og gratis medlemskap.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid vedlikehold">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Vedlikehold</h3>
+          <p class="orders-desc-p">Trenger du vedlikehold eller oppgraderinger på eksisterende nettsted eller sosiale medier? Da hjelper jeg deg gladlig! Beskriv i kontakt skjema nedenfor hvilke utfordringer du ønsker assistanse i, og vi finner en ordning på det.</p>
+        </div>
+        <div class="col-md-offset-3 col-md-5">
+          <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac') %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="grafisk-orders">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="orders-bg text-center">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </div>
+          <div class="caption">
+            <h2 class="orders-desc-h2 text-center">Logodesign</h2>
+            <table class="table table-striped">
+              <tr>
+                <td>Skreddersydd Design</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Høyoppløst</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Vector grafikk for print</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Bitmap grafikk for skjerm</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Web optimalisert</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Tilpasset ulike mediekanaler</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Fornøydgaranti</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Trykk klar</td>
+              </tr>
+            </table>
+            <h2 class="price green text-center">Pris: 2490,-</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="orders-bg text-center">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+          </div>
+          <div class="caption">
+            <h2 class="orders-desc-h2 text-center">Profilmanual</h2>
+            <table class="table table-striped">
+              <tr>
+                <td>Skreddersydd Design</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Høyoppløst</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Vector Grafikk</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Trykk klar</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Virksomhetens beskrivelse</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Virksomhetens fonter</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Virksomhetens farger</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Utvikling av logo</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Utvikling av designelementer</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+              <tr>
+                <td>X-avstand på logo</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Bruksområder og regler for logobruk</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Logo i praksis</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+            </table>
+            <h2 class="price green text-center">Pris: 3990,-</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="orders-bg text-center">
+            <i class="fa fa-address-card" aria-hidden="true"></i>
+          </div>
+          <div class="caption">
+            <h2 class="orders-desc-h2 text-center">Grafisk Profilering</h2>
+            <table class="table table-striped">
+              <tr>
+                <td>Design av visitkort</td>
+              </tr>
+              <tr>
+                <td>Design av ID kort</td>
+              </tr>
+              <tr>
+                <td>Design av reklame eller promoteringsmateriell</td>
+              </tr>
+              <tr>
+                <td>Design av web annonser</td>
+              </tr>
+              <tr>
+                <td>Administrere sosiale medier</td>
+              </tr>
+            </table>
+            <h2 class="price green text-center">Pris: 300,- pr/time</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="orders-form">
+  <div class="container">
+    <h2 class="text-center">Kontakt & Bestill</h2>
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6 well">
+        <%= form_for @order do |f| %>
+          <div class="form-group">
+            <%= f.label :fornavn %>
+            <%= f.text_field :fornavn, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :etternavn %>
+            <%= f.text_field :fornavn, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :mobil %>
+            <%= f.number_field :mobil, class: 'form-control' %>
+          </div>
+          
+          <div class="btn-group">
+            <%= f.label "Tjeneste" %></br>
+            <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :beskrivelse %>
+            <%= f.text_area :beskrivelse, class: 'form-control' %>
+          </div>
+          
+          <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
+          <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section id="grafisk-orders-info" class="utvidet-info">
+  <h2 class="text-center">Utvidet Info</h2>
+  <div class="container-fluid lekker">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Logodesign</h3>
+          <p class="orders-desc-p">Trenger du logo til din virksomhet? Digitikk.no tilbyr skreddersydde logoer tilpasset dine behov. I tillegg til høyoppløst bitmap grafikk, levers også logoen i nydelig vector grafikk tilpasset print. Logoen designes etter virksomhetens ønsker, og innspill fra designer om ønskelig. Du vil motta en ferdig mappe med ulike versjoner av logoen slik at du kan bruke den på tvers av ulike mediekanaler i forskjellige filformater.</p>
+        </div>
+        <div class="col-md-offset-3 col-md-5">
+          <%= image_tag("web_design-min.png", class: 'web-design-icons') %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid fabelaktig">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <%= image_tag("macs_edited_new.png", class: 'web-info-mac') %>
+        </div>
+        <div class="col-md-offset-3 col-md-5">
+          <h3>Profilmanual</h3>
+          <p class="orders-desc-p">Profilmanualen er den viktigste nøkkelen for hvordan din virksomhet skal fremstå best mulig visuelt. Alle farger, fonter, designelementer og logoversjoner skal defineres i bedriftens profilmanualen. Dermed har virksomheten noe fast å forholde seg til gjennom reklame og markedsføring. Din profilmanual skreddersys derfor med fokus på hvordan virksomhetens profil ønsker å kommuniserere i markedsføringen. Å ha en rød tråd av designelementer i all markedsføring er effektivt!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid vedlikehold">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Grafisk Profilering</h3>
+          <p class="orders-desc-p">Digitikk hjelper gjerne med å designe andre grafiske elementer som visitkort, reklameplakater og promoteringsmateriell. Dette designes i henhold til bedriftens visuelle profil. Ta kontakt, så hjelper jeg deg gjerne!</p>
+        </div>
+        <div class="col-md-offset-3 col-md-5">
+          <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac') %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="Video-orders" class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="orders-bg text-center">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </div>
+          <div class="caption">
+            <h2 class="orders-desc-h2 text-center">Videoredigering</h2>
+            <table class="table table-striped">
+              <tr>
+                <td>Proffesionell Klipping</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Lydbehandling</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Fargekorrigering</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Spesialeffekter</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Reklamefilmer</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Promoteringsfilmer</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Holdningskampanjer</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Valgfrie videoformat</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Kan gjøres over nett</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>7 års erfaring</td>
+                <td class="green">*</td>
+              </tr>
+            </table>
+            <h2 class="price green text-center">Pris: 300,- pr/time</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="orders-bg text-center">
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+          </div>
+          <div class="caption">
+            <h2 class="orders-desc-h2 text-center">Film & Klipp</h2>
+            <table class="table table-striped">
+              <tr>
+                <td>Proffesionell Klipping</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Reklamefilmer</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Promoteringsfilmer</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Holdningskampanjer</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Kvalitetsrikt filmutstyr</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Planlegging av prosessmodeller</td>
+                <td class="green">*</td>
+              </tr>
+              <tr>
+                <td>Planlegging av storyboards</td>
+                <td class="green">*</td>
+              </tr>
+            </table>
+            <h2 class="price green text-center">Pris: 3990,-</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="orders-bg text-center">
+            <i class="fa fa-address-card" aria-hidden="true"></i>
+          </div>
+          <div class="caption">
+            <h2 class="orders-desc-h2 text-center">Grafisk Profilering</h2>
+            <table class="table table-striped">
+              <tr>
+                <td>Design av visitkort</td>
+              </tr>
+              <tr>
+                <td>Design av ID kort</td>
+              </tr>
+              <tr>
+                <td>Design av reklame eller promoteringsmateriell</td>
+              </tr>
+              <tr>
+                <td>Design av web annonser</td>
+              </tr>
+              <tr>
+                <td>Administrere sosiale medier</td>
+              </tr>
+            </table>
+            <h2 class="price green text-center">Pris: 300,- pr/time</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

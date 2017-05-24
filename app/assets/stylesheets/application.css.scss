@@ -688,6 +688,7 @@ ul hr {
     background-color: #72b01d;
     width: 100%;
     height: 200px;
+    border-radius: 10px;
 }
 
 .orders-bg i {
@@ -741,7 +742,7 @@ ul hr {
     font-size: 13px;
 }
 
-.utvidet-info h2 {
+.utvidet-info h2, .orders-form h2 {
     font-size: 60px;
     text-transform: uppercase;
     margin-left: 14px;
@@ -752,17 +753,65 @@ ul hr {
 }
 
 .utvidet-info h3 {
-    font-size: 19px;
+    font-size: 23px;
     font-weight: bold;
     font-family: 'Dosis', sans-seriff;
-    margin-bottom: 8px;
+    padding-top: 120px;
+    padding-bottom: 10px;
 }
 
 .utvidet-info p {
-    font-size: 13px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 120px;
 }
 
 #web-orders, #grafisk-orders, #video-orders {
     margin-top: 50px;
 }
+
+
+.lekker, .vedlikehold {
+    background-color: #f2f2f2;
+}
+
+.utvidet-info img {
+    height: 400px;
+    padding-top: 100px;
+}
+
+.btn-group label {
+    margin-bottom: 10px;
+}
+
+.btn-group select {
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.btn-group select:hover {
+    color: #428bca;
+    background-color: white;
+    border: 2px solid #428bca;
+    transition: 0.3s;
+}
+
+.btn-send-order {
+    color: white;
+    background-color: #72b01d;
+    transition: 0.3s;
+}
+
+.btn-send-order:hover {
+    color: #3f7d20;
+    background-color: white;
+    border: 2px solid #3f7d20;
+    transition: 0.3s;
+}
+
+p.terms {
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 7px;
+}
+
