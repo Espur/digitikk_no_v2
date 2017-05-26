@@ -12,17 +12,17 @@
     <div class="container">
         <div class="row text-center">
             <ul class="nav nav-tabs">
-                 <li role="presentation" class="active"><a href="#">Web Design</a></li>
-                 <li role="presentation"><a href="#">Film & Klipp</a></li>
-                 <li role="presentation"><a href="#">Grafisk Design</a></li>
-                 <li role="presentation"><a href="#">Annet</a></li>
+                 <li role="presentation" class="active web-tab"><a id="web-tab">Web Design</a></li>
+                 <li role="presentation" class="grafisk-tab"><a id="grafisk-tab">Grafisk Design</a></li>
+                 <li role="presentation" class="video-tab"><a id="video-tab">Film og Klipp</a></li>
+                 <li role="presentation" class="annet-tab"><a id="annet-tab">Annet</a></li>
             </ul>
         </div>
     </div>
 </section>
 
 
-<section id="web-orders">
+<section id="web-orders" class="web-orders">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -205,103 +205,99 @@
       </div>
     </div>
   </div>
+  
+  <div class="orders-form" id="web-form">
+    <div class="container">
+      <h2 class="text-center">Kontakt & Bestill</h2>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 well">
+          <%= form_for @order do |f| %>
+            <div class="form-group">
+              <%= f.label :fornavn %>
+              <%= f.text_field :fornavn, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :etternavn %>
+              <%= f.text_field :fornavn, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :mobil %>
+              <%= f.number_field :mobil, class: 'form-control' %>
+            </div>
+            
+            <div class="btn-group">
+              <%= f.label "Tjeneste" %></br>
+              <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :beskrivelse %>
+              <%= f.text_area :beskrivelse, class: 'form-control' %>
+            </div>
+            
+            <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
+            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="web-orders-info" class="utvidet-info web-orders-info">
+    <h2 class="text-center">Utvidet Info</h2>
+    <div class="container-fluid lekker">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Lekker (Websider)</h3>
+            <p class="orders-desc-p"><strong>Lekker</strong> pakken passer perfekt til deg som er selvstendig næringsdrivende, privatperson eller driver en mindre virksomhet. Siden vil inneholde all nødvendig informasjon om dine tjenester eller produkter. Samtidig som nettsiden vil ha et interessevekkende design, vil det også være mulig for kunder å kontakte deg gjennom kontaktskjema på mail.</p>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <%= image_tag("web_design-min.png", class: 'web-design-icons') %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid fabelaktig">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <%= image_tag("macs_edited_new.png", class: 'web-info-mac') %>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <h3>Fabelaktig</h3>
+            <p class="orders-desc-p"><strong>Fabelaktig</strong> er en mer fleksibel utgave av lekker pakken. Denne pakken er skreddersydd til deg som driver en større bedrfit, men passer også til de som trenger flere funskjoner. Gjennom lekker + blir det mulig for brukere å logge inn / registrere seg, lage brukerprofiler, gjennomføre betalinger og mye mer. Om ønskelig, er det også mulig å gjøre det slik at brukere kan velge mellom premium og gratis medlemskap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid vedlikehold">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Vedlikehold</h3>
+            <p class="orders-desc-p">Trenger du vedlikehold eller oppgraderinger på eksisterende nettsted eller sosiale medier? Da hjelper jeg deg gladlig! Beskriv i kontakt skjema nedenfor hvilke utfordringer du ønsker assistanse i, og vi finner en ordning på det.</p>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
-<div class="orders-form">
-  <div class="container">
-    <h2 class="text-center">Kontakt & Bestill</h2>
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6 well">
-        <%= form_for @order do |f| %>
-          <div class="form-group">
-            <%= f.label :fornavn %>
-            <%= f.text_field :fornavn, class: 'form-control' %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :etternavn %>
-            <%= f.text_field :fornavn, class: 'form-control' %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :email %>
-            <%= f.email_field :email, class: 'form-control' %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :mobil %>
-            <%= f.number_field :mobil, class: 'form-control' %>
-          </div>
-          
-          <div class="btn-group">
-            <%= f.label "Tjeneste" %></br>
-            <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :beskrivelse %>
-            <%= f.text_area :beskrivelse, class: 'form-control' %>
-          </div>
-          
-          <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
-          <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<section id="web-orders-info" class="utvidet-info">
-  <h2 class="text-center">Utvidet Info</h2>
-  <div class="container-fluid lekker">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h3>Lekker (Websider)</h3>
-          <p class="orders-desc-p"><strong>Lekker</strong> pakken passer perfekt til deg som er selvstendig næringsdrivende, privatperson eller driver en mindre virksomhet. Siden vil inneholde all nødvendig informasjon om dine tjenester eller produkter. Samtidig som nettsiden vil ha et interessevekkende design, vil det også være mulig for kunder å kontakte deg gjennom kontaktskjema på mail.</p>
-        </div>
-        <div class="col-md-offset-3 col-md-5">
-          <%= image_tag("web_design-min.png", class: 'web-design-icons') %>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container-fluid fabelaktig">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <%= image_tag("macs_edited_new.png", class: 'web-info-mac') %>
-        </div>
-        <div class="col-md-offset-3 col-md-5">
-          <h3>Fabelaktig</h3>
-          <p class="orders-desc-p"><strong>Fabelaktig</strong> er en mer fleksibel utgave av lekker pakken. Denne pakken er skreddersydd til deg som driver en større bedrfit, men passer også til de som trenger flere funskjoner. Gjennom lekker + blir det mulig for brukere å logge inn / registrere seg, lage brukerprofiler, gjennomføre betalinger og mye mer. Om ønskelig, er det også mulig å gjøre det slik at brukere kan velge mellom premium og gratis medlemskap.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container-fluid vedlikehold">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h3>Vedlikehold</h3>
-          <p class="orders-desc-p">Trenger du vedlikehold eller oppgraderinger på eksisterende nettsted eller sosiale medier? Da hjelper jeg deg gladlig! Beskriv i kontakt skjema nedenfor hvilke utfordringer du ønsker assistanse i, og vi finner en ordning på det.</p>
-        </div>
-        <div class="col-md-offset-3 col-md-5">
-          <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac') %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="grafisk-orders">
+<section id="grafisk-orders" class="grafisk-orders">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -443,101 +439,98 @@
       </div>
     </div>
   </div>
-</section>
-
-<div class="orders-form">
-  <div class="container">
-    <h2 class="text-center">Kontakt & Bestill</h2>
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6 well">
-        <%= form_for @order do |f| %>
-          <div class="form-group">
-            <%= f.label :fornavn %>
-            <%= f.text_field :fornavn, class: 'form-control' %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :etternavn %>
-            <%= f.text_field :fornavn, class: 'form-control' %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :email %>
-            <%= f.email_field :email, class: 'form-control' %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :mobil %>
-            <%= f.number_field :mobil, class: 'form-control' %>
-          </div>
-          
-          <div class="btn-group">
-            <%= f.label "Tjeneste" %></br>
-            <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
-          </div>
-          
-          <div class="form-group">
-            <%= f.label :beskrivelse %>
-            <%= f.text_area :beskrivelse, class: 'form-control' %>
-          </div>
-          
-          <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
-          <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
-        <% end %>
+  
+  <div class="orders-form" id="grafisk-form">
+    <div class="container">
+      <h2 class="text-center">Kontakt & Bestill</h2>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 well">
+          <%= form_for @order do |f| %>
+            <div class="form-group">
+              <%= f.label :fornavn %>
+              <%= f.text_field :fornavn, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :etternavn %>
+              <%= f.text_field :fornavn, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :mobil %>
+              <%= f.number_field :mobil, class: 'form-control' %>
+            </div>
+            
+            <div class="btn-group">
+              <%= f.label "Tjeneste" %></br>
+              <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :beskrivelse %>
+              <%= f.text_area :beskrivelse, class: 'form-control' %>
+            </div>
+            
+            <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
+            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
-<section id="grafisk-orders-info" class="utvidet-info">
+  
+  <div id="grafisk-orders-info" class="utvidet-info grafisk-orders-info">
   <h2 class="text-center">Utvidet Info</h2>
-  <div class="container-fluid lekker">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h3>Logodesign</h3>
-          <p class="orders-desc-p">Trenger du logo til din virksomhet? Digitikk.no tilbyr skreddersydde logoer tilpasset dine behov. I tillegg til høyoppløst bitmap grafikk, levers også logoen i nydelig vector grafikk tilpasset print. Logoen designes etter virksomhetens ønsker, og innspill fra designer om ønskelig. Du vil motta en ferdig mappe med ulike versjoner av logoen slik at du kan bruke den på tvers av ulike mediekanaler i forskjellige filformater.</p>
-        </div>
-        <div class="col-md-offset-3 col-md-5">
-          <%= image_tag("web_design-min.png", class: 'web-design-icons') %>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="container-fluid fabelaktig">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <%= image_tag("macs_edited_new.png", class: 'web-info-mac') %>
-        </div>
-        <div class="col-md-offset-3 col-md-5">
-          <h3>Profilmanual</h3>
-          <p class="orders-desc-p">Profilmanualen er den viktigste nøkkelen for hvordan din virksomhet skal fremstå best mulig visuelt. Alle farger, fonter, designelementer og logoversjoner skal defineres i bedriftens profilmanualen. Dermed har virksomheten noe fast å forholde seg til gjennom reklame og markedsføring. Din profilmanual skreddersys derfor med fokus på hvordan virksomhetens profil ønsker å kommuniserere i markedsføringen. Å ha en rød tråd av designelementer i all markedsføring er effektivt!</p>
+    <div class="container-fluid lekker">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Logodesign</h3>
+            <p class="orders-desc-p">Trenger du logo til din virksomhet? Digitikk.no tilbyr skreddersydde logoer tilpasset dine behov. I tillegg til høyoppløst bitmap grafikk, levers også logoen i nydelig vector grafikk tilpasset print. Logoen designes etter virksomhetens ønsker, og innspill fra designer om ønskelig. Du vil motta en ferdig mappe med ulike versjoner av logoen slik at du kan bruke den på tvers av ulike mediekanaler i forskjellige filformater.</p>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <%= image_tag("Logo_undertext_v2-min.png", class: 'logo-info orders-info-imgs') %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
-  <div class="container-fluid vedlikehold">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h3>Grafisk Profilering</h3>
-          <p class="orders-desc-p">Digitikk hjelper gjerne med å designe andre grafiske elementer som visitkort, reklameplakater og promoteringsmateriell. Dette designes i henhold til bedriftens visuelle profil. Ta kontakt, så hjelper jeg deg gjerne!</p>
+    
+    <div class="container-fluid fabelaktig">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <%= image_tag("profilmanual_ms_ub-min.png", class: 'pm_ms_ub') %>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <h3>Profilmanual</h3>
+            <p class="orders-desc-p">Profilmanualen er den viktigste nøkkelen for hvordan din virksomhet skal fremstå best mulig visuelt. Alle farger, fonter, designelementer og logoversjoner skal defineres i bedriftens profilmanualen. Dermed har virksomheten noe fast å forholde seg til gjennom reklame og markedsføring. Din profilmanual skreddersys derfor med fokus på hvordan virksomhetens profil ønsker å kommuniserere i markedsføringen. Å ha en rød tråd av designelementer i all markedsføring er effektivt!</p>
+          </div>
         </div>
-        <div class="col-md-offset-3 col-md-5">
-          <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac') %>
+      </div>
+    </div>
+    
+    <div class="container-fluid vedlikehold">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Grafisk Profilering</h3>
+            <p class="orders-desc-p">Digitikk hjelper gjerne med å designe andre grafiske elementer som visitkort, reklameplakater og promoteringsmateriell. Dette designes i henhold til bedriftens visuelle profil. Ta kontakt, så hjelper jeg deg gjerne!</p>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <%= image_tag("profilering-min.png", class: 'profilering-img') %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-<section id="Video-orders" class="">
+<section id="video-orders" class="video-orders">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -619,19 +612,11 @@
                 <td class="green">*</td>
               </tr>
               <tr>
-                <td>Kvalitetsrikt filmutstyr</td>
-                <td class="green">*</td>
-              </tr>
-              <tr>
                 <td>Planlegging av prosessmodeller</td>
                 <td class="green">*</td>
               </tr>
-              <tr>
-                <td>Planlegging av storyboards</td>
-                <td class="green">*</td>
-              </tr>
             </table>
-            <h2 class="price green text-center">Pris: 3990,-</h2>
+            <h2 class="price green text-center">Pris: 300,- pr/time</h2>
           </div>
         </div>
       </div>
@@ -642,28 +627,107 @@
             <i class="fa fa-address-card" aria-hidden="true"></i>
           </div>
           <div class="caption">
-            <h2 class="orders-desc-h2 text-center">Grafisk Profilering</h2>
+            <h2 class="orders-desc-h2 text-center">VHS Digitalisering</h2>
             <table class="table table-striped">
               <tr>
-                <td>Design av visitkort</td>
+                <td>Digitaliserer dine VHS kasetter</td>
               </tr>
               <tr>
-                <td>Design av ID kort</td>
+                <td>Kan lever på minnepinne (inkl)</td>
               </tr>
               <tr>
-                <td>Design av reklame eller promoteringsmateriell</td>
+                <td>Kan leveres på DVD</td>
               </tr>
               <tr>
-                <td>Design av web annonser</td>
+                <td>Kan levers i mp4 format</td>
               </tr>
               <tr>
-                <td>Administrere sosiale medier</td>
+                <td>Kvalitetsbevaring</td>
               </tr>
             </table>
-            <h2 class="price green text-center">Pris: 300,- pr/time</h2>
+            <h2 class="price green text-center">Pris: 199,- pr/time</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="orders-form" id="video-form">
+    <div class="container">
+      <h2 class="text-center">Kontakt & Bestill</h2>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 well">
+          <%= form_for @order do |f| %>
+            <div class="form-group">
+              <%= f.label :fornavn %>
+              <%= f.text_field :fornavn, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :etternavn %>
+              <%= f.text_field :fornavn, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :mobil %>
+              <%= f.number_field :mobil, class: 'form-control' %>
+            </div>
+            
+            <div class="btn-group">
+              <%= f.label "Tjeneste" %></br>
+              <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.label :beskrivelse %>
+              <%= f.text_area :beskrivelse, class: 'form-control' %>
+            </div>
+            
+            <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
+            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="video-orders-info" class="utvidet-info video-orders-info">
+    <h2 class="text-center">Utvidet Info</h2>
+    <div class="container-fluid lekker">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Videoredigering og Film</h3>
+            <p class="orders-desc-p">En appellerende reklame / promoteringsfilm er viktig materiell for din markedsføring. I startfasen utvikles en plan i samarbeid med kunde på hvordan din video skal appelere best mulig til potensielle kunder / målgruppe. Denne planen vil inneholde informasjon om videoens budskap, målgruppe, mediekanal og virkemidler som skal bruers. Videoen leveres i ønsket format tilpasset ønsket kanal. har du allerede film liggende som skal redigeres, tar jeg gjerne i mot dette gjennom nett.</br></br>Digitikk.no baserer seg i Ålesund. Dersom du behøver full produksjon av film-materiell er det bare å ta kontakt for mer informasjon.</p>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <%= image_tag("premiere-min.png", class: 'premiere orders-info-imgs') %>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid fabelaktig">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <i class="fa fa-film vhs-icon-big" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-offset-3 col-md-5">
+            <h3>VHS Digitalisering</h3>
+            <p class="orders-desc-p">Dagens teknologi gjør hverdagen stadig mye enklere for oss. Dessverre betyr dette at mye av den eldre teknologien faller bort. VHS kassettspillere er nesten ikke å finne lenger, noe skaper trøbbel for avspilling av gamle filmer. Har du noen VHS kassetter liggende oppe på mørkloftet? Digitikk.no har utstyr som konverterer de gamle filene til dagens formater. Filmene kan leveres digitalt på minnepinne, over nett, eller på DVD.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
+
+
