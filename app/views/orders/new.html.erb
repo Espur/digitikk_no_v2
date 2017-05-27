@@ -1,6 +1,6 @@
 <div class="jumbotron orders-hero">
     <div class="container">
-        <h1>Bestill</h1>
+        <h1>Tjenester</h1>
     </div>
 </div>
 
@@ -726,6 +726,55 @@
             <p class="orders-desc-p">Dagens teknologi gjør hverdagen stadig mye enklere for oss. Dessverre betyr dette at mye av den eldre teknologien faller bort. VHS kassettspillere er nesten ikke å finne lenger, noe skaper trøbbel for avspilling av gamle filmer. Har du noen VHS kassetter liggende oppe på mørkloftet? Digitikk.no har utstyr som konverterer de gamle filene til dagens formater. Filmene kan leveres digitalt på minnepinne, over nett, eller på DVD.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="annet-orders">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5"><div class="col-md-1>"></div>
+        <h3>Andre Tjenester</h3>
+        <p class="annet-info">Dersom du trenger assistanse innenfor andre oppgaver i samme fagfelt, er det bare å ta kontakt. Du vil få svar fortløpende. Alle felt i kontaktskjema er påkrevd.</p>
+      </div>
+      <div class="col-md-offset-1 col-md-5 well annet-form">
+        <%= form_for @order do |f| %>
+          <div class="form-group">
+            <%= f.label :fornavn %>
+            <%= f.text_field :fornavn, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :etternavn %>
+            <%= f.text_field :fornavn, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :mobil %>
+            <%= f.number_field :mobil, class: 'form-control' %>
+          </div>
+          
+          <div class="btn-group">
+            <%= f.label "Tjeneste" %></br>
+            <%= f.select(:tjeneste_option, options_for_select([['Lekker (Webside)', 'Lekker (Webside)'], ['Fabelaktig (Webside)', 'Fabelaktig (Webside)'], ['Vedlikehold - Web', 'Vedlikehold - Web'], ['Logodesign', 'Logodesign'], ['Profilmanual', 'Profilmanual'], ['Grafisk Profilering', 'Grafisk Profilering'], ['Videoredigering', 'Videoredigering'], ['Film & Klipp', 'Film & Klipp'], ['VHS Digitalisering', 'VHS Digitalisering']]), {}, { :class => 'btn btn-sm btn-primary dropdown-toggle' }) %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :beskrivelse %>
+            <%= f.text_area :beskrivelse, class: 'form-control' %>
+          </div>
+          
+          <div class="text-center">
+          <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
+          <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

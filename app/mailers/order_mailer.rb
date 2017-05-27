@@ -9,6 +9,6 @@ class OrderMailer < ActionMailer::Base
        @tjeneste = tjeneste
        @beskrivelse = beskrivelse
        
-       mail(from: email, subject: 'Contact form from Digitikk.no')
+       mail(from: email, subject: 'Bestilling fra Digitikk.no')
     end
 end

@@ -6,6 +6,6 @@ class ContactMailer < ActionMailer::Base
        @epost = epost
        @body = body
        
-       mail(from: epost, subject: 'Contact form from Digitikk.no')
+       mail(from: epost, subject: 'Kontakskjema fra Digitikk.no')
     end
 end
