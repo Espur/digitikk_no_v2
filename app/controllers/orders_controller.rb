@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
             etternavn = params[:orders][:etternavn]
             email = params[:orders][:email]
             mobil = params[:orders][:mobil]
-            tjeneste = params[:orders][:tjeneste]
+            tjeneste = params[:orders][:tjeneste_option]
             beskrivelse = params[:orders][:beskrivelse]
             terms = params[:orders][:terms]
             
@@ -29,6 +29,6 @@ class OrdersController < ApplicationController
     
     private
         def order_params
-           params.require(:order).permit(:fornavn, :etternavn, :email, :mobil, :tjeneste, :beskrivelse, :terms) 
+           params.require(:order).permit(:fornavn, :etternavn, :email, :mobil, :tjeneste_option, :beskrivelse, :terms) 
         end
 end

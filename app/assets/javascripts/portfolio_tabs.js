@@ -41,6 +41,10 @@ $(document).ready(function() {
     });
     
     $('.annet-tab').click(function() {
+        $('.annet-tab').addClass('active');
+        $('.web-tab, grafisk-tab, video-tab').removeClass('active');
+        $('#annet-orders').toggle();
+        $('#web-orders, #grafisk-orders, #video-orders').hide();
     });
     
 });

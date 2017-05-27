@@ -3,7 +3,5 @@ class Order < ActiveRecord::Base
     validates :etternavn, presence: true
     validates :email, presence: true
     validates :mobil, presence: true
-    validates :tjeneste, presence: true
     validates :beskrivelse, presence: true
-    validates :terms, presence: true
 end
