@@ -15,6 +15,10 @@ $(document).ready(function() {
         $('.web').hide('slow');
     });
     
+    $('.camera-btn').click(function() {
+        $('.photo').slideToggle();
+    })
+    
     //ORDERS ANIMATIONS
     
     $('#grafisk-orders, #video-orders, #annet-orders').hide();
@@ -45,6 +49,40 @@ $(document).ready(function() {
         $('.web-tab, grafisk-tab, video-tab').removeClass('active');
         $('#annet-orders').toggle();
         $('#web-orders, #grafisk-orders, #video-orders').hide();
+    });
+    
+    
+    
+    // SCROLL SECTION ANIMATIONS
+    
+    $('#nav-about').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
+        }, 1500);
+    });
+    
+    $('#nav-services').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#services').offset().top
+        }, 1500);
+    });
+    
+    $('#nav-portfolio').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#portfolio').offset().top
+        }, 1500);
+    });
+    
+    $('#nav-contact').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top
+        }, 1500);
+    });
+    
+    $('.nav-img').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#hero').offset().top
+        }, 1500);
     });
     
 });

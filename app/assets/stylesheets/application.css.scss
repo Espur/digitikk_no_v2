@@ -149,6 +149,11 @@ ol li {
     
 }
 
+nav li a {
+    color: white;
+    transition: 0.2s;
+}
+
 .nav-content li:hover {
     opacity: 0.7;
     transition: 0.2s;
@@ -230,7 +235,7 @@ ol li {
     color: #3f7d20;
     border: 3px solid #3f7d20;
     transition: 0.3s;
-    border-radius: 15px;
+
 }
 
 
@@ -260,6 +265,7 @@ ol li {
     line-height: 27px;
     margin-bottom: 70px;
     color: #7a7a7a;
+    font-style: italic;
 }
 
 #about li {
@@ -685,18 +691,70 @@ ul hr {
 
 
 .orders-bg {
-    background-color: #72b01d;
     width: 100%;
     height: 200px;
-    border-radius: 10px;
-}
+    border-radius: 5px;
+    background-size: 100%;
+    transition: 0.2s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    max-width: 100%;
+} 
 
+.orders-bg:hover {
+    -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 .orders-bg i {
     color: white;
     font-size: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+
+.lekker-bg {
+    background-image: image-url('web_design.png');
+}
+
+.fabelaktig-bg {
+    background-image: image-url('web_app.png');
+}
+
+.vedlikehold-bg {
+    background-image: image-url('vedlikehold.png');
+}
+
+.logo-bg {
+    background-image: image-url('logo_utvikling.png');
+}
+
+.profilmanual-bg {
+    background-image: image-url('profilmanual.png');
+}
+
+.profilering-bg {
+    background-image: image-url('grafisk_profilering.png');
+}
+
+.editing-bg {
+    background-image: image-url('premiere-min.png');
+}
+
+.film-bg {
+    background-image: image-url('film.png');
+}
+
+.vhs-bg {
+    background-image: image-url('vhs.png');
+}
+
+
 
 .red {
     color: #f72a45;
@@ -721,6 +779,7 @@ ul hr {
 .price {
     font-size: 35px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .mva {
@@ -826,7 +885,19 @@ p.terms {
 }
 
 .orders-hero {
-    height: 200px ;
+    height: 200px;
+    background-image: image-url("tjenester-min.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.orders-hero h1 {
+    color: white;
+    font-family: 'Rubik', sans-seriff;
+    font-size: 70px;
+    
 }
 
 #annet-orders h3 {
@@ -846,3 +917,14 @@ p.terms {
 .annet-form {
     margin-top: 60px;
 }
+
+.orders-nav img {
+    height: 50px;
+    margin-top: -20px;
+}
+
+.orders-nav {
+    margin-bottom: -10px;
+}
+
+

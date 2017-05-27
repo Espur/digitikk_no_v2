@@ -1,3 +1,26 @@
+<nav class="navbar navbar-default orders-nav">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to image_tag('left-logo-long-text-min.png'), root_path, class: 'navbar-brand'  %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to 'Forside', root_path %></li>
+        <li class="active"><%= link_to 'Tjenester', new_order_path %> <span class="sr-only">(current)</span></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <div class="jumbotron orders-hero">
     <div class="container">
         <h1>Tjenester</h1>
@@ -27,7 +50,7 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg lekker-bg text-center">
             <i class="fa fa-diamond" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -35,43 +58,43 @@
             <table class="table table-striped">
               <tr>
                 <td>Lekkert og Skreddersydd Design</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Responsivt</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Opp til 5 sider</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Unik</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Kontak Skjema</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Logg Inn / Registrer</td>
-                <td class="red">x</td>
+                <td class="red"><i class="fa fa-times" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Blogg</td>
-                <td class="red">x</td>
+                <td class="red"><i class="fa fa-times" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Medlemskap - Premium eller Free</td>
-                <td class="red">x</td>
+                <td class="red"><i class="fa fa-times" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Databaseløsninger</td>
-                <td class="red">x</td>
+                <td class="red"><i class="fa fa-times" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Betaling med kort</td>
-                <td class="red">x</td>
+                <td class="red"><i class="fa fa-times" aria-hidden="true"></i></td>
               </tr>
             </table>
             <h2 class="price green text-center">Pris: 5790,-</h2>
@@ -102,7 +125,7 @@
       
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg fabelaktig-bg text-center">
             <i class="fa fa-user-plus" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -110,43 +133,43 @@
             <table class="table table-striped">
               <tr>
                 <td>Lekkert og Skreddersydd Design</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Responsivt</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Opp til 5 sider</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Unik</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Kontak Skjema</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Logg Inn / Registrer</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Blogg</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Medlemskap - Premium eller Free</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Databaseløsninger</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
                 <td>Betaling med kort</td>
-                <td class="green">*</td>
+                <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
             </table>
             <h2 class="price green text-center">Pris: 8990,-</h2>
@@ -177,7 +200,7 @@
       
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg vedlikehold-bg text-center">
             <i class="fa fa-wrench" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -303,7 +326,7 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg logo-bg text-center">
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -311,31 +334,24 @@
             <table class="table table-striped">
               <tr>
                 <td>Skreddersydd Design</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Høyoppløst</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Vector grafikk for print</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Bitmap grafikk for skjerm</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Web optimalisert</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Tilpasset ulike mediekanaler</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Fornøydgaranti</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Trykk klar</td>
@@ -348,7 +364,7 @@
       
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg profilmanual-bg text-center">
             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -356,52 +372,40 @@
             <table class="table table-striped">
               <tr>
                 <td>Skreddersydd Design</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Høyoppløst</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Vector Grafikk</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Trykk klar</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Virksomhetens beskrivelse</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Virksomhetens fonter</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Virksomhetens farger</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Utvikling av logo</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Utvikling av designelementer</td>
-                <td class="green">*</td>
               </tr>
               <tr>
               <tr>
                 <td>X-avstand på logo</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Bruksområder og regler for logobruk</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Logo i praksis</td>
-                <td class="green">*</td>
               </tr>
               <tr>
             </table>
@@ -412,7 +416,7 @@
       
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg profilering-bg text-center">
             <i class="fa fa-address-card" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -537,7 +541,7 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg editing-bg text-center">
             <i class="fa fa-pencil" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -545,43 +549,33 @@
             <table class="table table-striped">
               <tr>
                 <td>Proffesionell Klipping</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Lydbehandling</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Fargekorrigering</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Spesialeffekter</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Reklamefilmer</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Promoteringsfilmer</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Holdningskampanjer</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Valgfrie videoformat</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Kan gjøres over nett</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>7 års erfaring</td>
-                <td class="green">*</td>
               </tr>
             </table>
             <h2 class="price green text-center">Pris: 300,- pr/time</h2>
@@ -591,7 +585,7 @@
       
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg film-bg text-center">
             <i class="fa fa-newspaper-o" aria-hidden="true"></i>
           </div>
           <div class="caption">
@@ -599,23 +593,18 @@
             <table class="table table-striped">
               <tr>
                 <td>Proffesionell Klipping</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Reklamefilmer</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Promoteringsfilmer</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Holdningskampanjer</td>
-                <td class="green">*</td>
               </tr>
               <tr>
                 <td>Planlegging av prosessmodeller</td>
-                <td class="green">*</td>
               </tr>
             </table>
             <h2 class="price green text-center">Pris: 300,- pr/time</h2>
@@ -625,7 +614,7 @@
       
       <div class="col-sm-4">
         <div class="thumbnail">
-          <div class="orders-bg text-center">
+          <div class="orders-bg vhs-bg text-center">
             <i class="fa fa-address-card" aria-hidden="true"></i>
           </div>
           <div class="caption">
