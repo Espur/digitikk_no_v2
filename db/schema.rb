@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170523204444) do
+ActiveRecord::Schema.define(version: 20170523203758) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "navn"
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20170523204444) do
     t.string   "tjeneste"
     t.text     "beskrivelse"
     t.string   "terms"
+    t.string   "tjeneste_option"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "tjeneste_option"
   end
 
 end

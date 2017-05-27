@@ -9,6 +9,7 @@ class MakeOrders < ActiveRecord::Migration
       t.string :tjeneste
       t.text :beskrivelse
       t.string :terms
+      t.string :tjeneste_option
       
       t.timestamps
     end

@@ -4,19 +4,22 @@ class OrdersController < ApplicationController
         @order = Order.new
     end
     
+    def index
+        redirect_to new_order_path
+    end
+    
     def create
         @order = Order.new(order_params)
         
         if @order.save 
-            fornavn = params[:orders][:fornavn]
-            etternavn = params[:orders][:etternavn]
-            email = params[:orders][:email]
-            mobil = params[:orders][:mobil]
-            tjeneste = params[:orders][:tjeneste_option]
-            beskrivelse = params[:orders][:beskrivelse]
-            terms = params[:orders][:terms]
+            fornavn = params[:order][:fornavn]
+            etternavn = params[:order][:etternavn]
+            email = params[:order][:email]
+            mobil = params[:order][:mobil]
+            tjeneste = params[:order][:tjeneste_option]
+            beskrivelse = params[:order][:beskrivelse]
             
-            ContantMailer.contact_email(fornavn, etternavn, email, mobil, tjeneste, beskrivelse, terms).deliver
+            OrderMailer.order_email(fornavn, etternavn, email, mobil, tjeneste, beskrivelse).deliver
             
             flash[:success] = 'Takk for din henvendelse. Du vil bli kontaktet fortløpende.'
             redirect_to root_path
@@ -29,6 +32,6 @@ class OrdersController < ApplicationController
     
     private
         def order_params
-           params.require(:order).permit(:fornavn, :etternavn, :email, :mobil, :tjeneste_option, :beskrivelse, :terms) 
+           params.require(:order).permit(:fornavn, :etternavn, :email, :mobil, :tjeneste_option, :beskrivelse) 
         end
 end
