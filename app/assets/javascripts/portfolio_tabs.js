@@ -3,21 +3,35 @@ $(document).ready(function() {
     //PORTFOLIO ANIMATIONS
     
     $('.video').hide();
+    $('.photo').hide();
+    $('.grafisk').hide();
+    $('.cv').hide();
     
     $('.code-btn').click(function() {
     $('.web').slideToggle();
-    $('.video').hide('slow');
+    $('.video, .photo, .grafisk, .cv').hide('slow');
     
     });
     
     $('.video-btn').click(function() {
         $('.video').slideToggle();
-        $('.web').hide('slow');
+        $('.web, .photo, .grafisk, .cv').hide('slow');
     });
     
     $('.camera-btn').click(function() {
         $('.photo').slideToggle();
-    })
+        $('.web, .video, .grafisk, .cv').hide();
+    });
+    
+    $('.pencil-btn').click(function() {
+        $('.grafisk').slideToggle();
+        $('.web, .video, .photo, .cv').hide();
+    });
+    
+    $('.cv-btn').click(function() {
+        $('.cv').slideToggle();
+        $('.web, .video, .photo, .grafisk').hide();
+    });
     
     //ORDERS ANIMATIONS
     

@@ -83,38 +83,34 @@
             <div class="row">
                 <div class="col-md-4 col-1">
                     <div class="i-bg-small text-center"><i class="fa fa-code text-center" aria-hidden="true"></i></div>
-                    <h4 class="text-center">Web Design</h4>
-                    <p>Trenger du en kontaktside til din bedrift? Kanskje trenger du bare en enkel nettside med strøkent design? Digitikk.no skreddersyr webløsninger etter <strong>DINE</strong> behov!</p>
-                    <a href="#" class="btn btn-primary">Se Webløsninger</a>
+                    <h4 class="text-center">Webløsninger</h4>
+                    <p>Digitikk.no skreddersyr webløsninger etter <strong>DINE</strong> behov! Fra strøkne design til fleksible webapplikasjoner til konkurransedyktige priser.</p>
                 </div>
                 <div class="col-md-4 col-2">
                     <div class="i-bg-small text-center"><i class="fa fa-terminal text-center" aria-hidden="true"></i></div>
-                    <h4 class="text-center">Web Utvikling</h4>
-                    <p>Digitikk.no leverer webløsninger akkurat slik du ønsker! I tillegg til skreddersydd design, kan du også få levert løsninger som <strong>Registrer</strong>, <strong>Logg Inn</strong>, <strong>Blogg</strong> og mange andre funskjoner!</p>
-                    <a href="#" class="btn btn-primary">Se Webløsninger</a>
+                    <h4 class="text-center">Film og Videoredigering</h4>
+                    <p>Reklamefilmer, promoteringsvideoer, informasjonsvideoer og mye mer!</br></br></br></p>
                 </div>
                 <div class="col-md-4 col-3">
                     <div class="i-bg-small text-center"><i class="fa fa-scissors text-center " aria-hidden="true"></i></div>
-                    <h4 class=text-center>Videoredigering</h4>
-                    <p>Trenger din virksomhet reklamefilm, promoteringsvideo eller lignende? Har du mangel på programvare? Digitikk.no har 7 års erfaring med video redigering og kraftig programvare til jobben!</p>
-                    <a href="#" class="btn btn-primary">Klipp Min Video!</a>
+                    <h4 class=text-center>VHS digitalisering</h4>
+                    <p>Har du noen gamle VHS kasetter liggende som du gjerne skulle ha spillt av? Digitikk.no konverterer disse til dagens formater til en rimelig penge.</p>
                 </div>
             </div>
             <div class="row final-row">
-                <div class="col-md-12">
-                    <div class="col-md-6">
-                        <div class="i-bg-big text-center"><i class="fa fa-video-camera text-center" aria-hidden="true"></i></div>
-                        <h4 class="text-center">Lokal Film og Foto</h4>
-                        <p>I tillegg til videoredigering, tar Digitikk.no også på seg lokale film oppdrag og fotografering. Digitikk holder til i Ålesund og tar på seg oppdrag der og omegn. Stiller med godt utstyr innen både lyd, bilde og programvare. Det er også mulig å bestille luft-foto med drone dersom det er øsnkelig.</p>
-                        <a href="#" class="btn btn-success">Jeg Trenger Film!</a>
-                    </div>
-                    <div class="col-md-6">
-                       <div class="i-bg-big text-center"><i class="fa fa-pencil text-center" aria-hidden="true"></i></div>
-                        <h4 class="text-center">Grafisk Design</h4>
-                        <p>Trenger din virksomhet en ny logo eller visuell profil? Digitikk designer og skaper din nye logo! Det er viktig at din logo kommuniserer best mulig mot dine kunder og gjenspeiler bedriftens visuelle preg. Om ønskelig, utvikler Digitikk også profilmanual for din virksomhet.</p>
-                        <a href="#" class="btn btn-success">Grafiske Løsninger</a>
-                    </div>
+                <div class="col-md-6">
+                   <div class="i-bg-big text-center"><i class="fa fa-pencil text-center" aria-hidden="true"></i></div>
+                    <h4 class="text-center">Grafisk Design</h4>
+                    <p>Logoutvikling og visuell profilering av din bedrift. Å fremstå best mulig visuelt i markedsføringen er viktig!</p>
                 </div>
+                <div class="col-md-6">
+                    <div class="i-bg-big text-center"><i class="fa fa-video-camera text-center" aria-hidden="true"></i></div>
+                    <h4 class="text-center">Dronephoto</h4>
+                    <p>Film eller photo fra lufta! Jeg stiller med helt stabilt dronekamera i fantastisk 4k oppløsning.</p>
+                </div>
+            </div>
+            <div class="text-center">
+            <%= link_to "Dette trenger jeg!", new_order_path, class: 'btn btn-order' %>
             </div>
         </div>
     </div>
@@ -138,7 +134,7 @@
                 <span class="i-bg"><i class="fa fa-pencil pencil-btn" aria-hidden="true"></i><p>Grafisk</p></span>
             </div>
             <div class="col-md-2 text-center">
-                <p class="cv cv-btn">CV</p>
+                <p class="cv-btn">CV</p>
             </div>
             <div class="col-md-2">
                 <span class="i-bg"><i class="fa fa-youtube yt-btn" aria-hidden="true"></i><p>Youtube</p></span>
@@ -338,11 +334,11 @@
             </div>
             
             <div class="grafisk examples text-center">
-                <div class="col-md-4">
+                <div class="col-md-8">
                     <%= image_tag('beate_logo.png') %>
                     <h5>Logo for <%= link_to "Beates Heilhetsterapi", 'http://www.beateflataker.no/' %></h5>
                 </div>
-                <div class="col-md-offset-4 col-md-4">
+                <div class="col-md-4">
                     <a href="https://drive.google.com/drive/u/1/folders/0B8vdi6Ira-VucjhHdmxrZElvVFE">
                         <%= image_tag('profilmanual_ms_ub-min.png') %>
                     </a>
@@ -352,21 +348,45 @@
             
             <div class="cv examples">
                 <div class="col-md-6">
-                    <div class="scrolldiv">
+                    <div class="scrolldiv img-left">
                         <%= image_tag('cv_1-min.png') %>
                         <%= image_tag('cv_2-min.png') %>
                         <%= image_tag('cv_3-min.png') %>
                     </div>
                 </div>
                 
-                <div class="col-md-6">
-                    <h4>Programmeringskunnskap</h4>
+                <div class="col-md-6 img-right">
+                    <h5>Programmeringskunnskap</h5>
                     <ul class="languages">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><%= image_tag('languages/html.png') %></li>
+                        <li><%= image_tag('languages/css.png') %></li>
+                        <li><%= image_tag('languages/jquery.gif') %></li>
+                        <li><%= image_tag('languages/ruby.jpg') %></li>
+                        <li><%= image_tag('languages/sass.png') %></li>
+                    </ul>
+                    <h5>Ferdigheter</h5>
+                    <ul class="skills">
+                        <li><%= image_tag('languages/rails.png') %></li>
+                        <li><%= image_tag('languages/bootstrap_new.png') %></li>
+                        <li><%= image_tag('languages/wordpress.png') %></li>
+                    </ul>
+                </div>
+                <div class="col-md-12 text-center">
+                    <h5>Gjennomførte kurs</h5>
+                    <ul class="courses">
+                        <li><i class="fa fa-check green" aria-hidden="true"></i><%= link_to "Complete Web Developer Bootcamp - RoR", 'https://www.udemy.com/job-ready-web-developer/learn/v4/overview' %></li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i><%= link_to "PSD to Responsive HTML5", 'https://www.udemy.com/psd-to-html5-beginner-to-advanced/learn/v4/overview' %></li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i><%= link_to "Responsive sites with HTML, CSS, JS & Bootstrap", 'https://www.udemy.com/build-responsive-website-using-html5-css3-js-and-bootstrap/learn/v4/overview' %></li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i><%= link_to "Ruby on Rails eCommerce", 'https://www.udemy.com/rails-ecommerce-app-with-html-template-from-themeforest/learn/v4/overview' %></li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy SQL</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy HTML & CSS</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy SASS</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy Ruby</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy Ruby on Rails</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy Javascript</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy jQuery</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy Make a Website</li>
+                        <li><i class="fa fa-check green" aria-hidden="true"></i>CodeCademy Make an Interactive Website</li>
                     </ul>
                 </div>
             </div>
@@ -402,8 +422,8 @@
     <div class="container">
         <div class="row contact-row">
             <h3 class="contact-title">Kontakt Digitikk</h3>
-            <p>Du vil få svar fortløpende</p>
-            <%= image_tag("left-logo-long-text.png", class: 'contact-logo') %>
+            <p class="contact-p">Du vil få svar fortløpende</p>
+            
             <div class="col-md-4 col-left">
                 <%= form_for @contact, url: contact_pages_path do |f| %>
                     <div class="form-group">
@@ -430,19 +450,10 @@
             
             <div class="col-md-4 col-right">
                 <ul class="contact-icons">
+                    <li><%= image_tag("left-logo-long-text_white.png", class: 'contact-logo') %></li>
                     <li><i class="fa fa-envelope" aria-hidden="true"></i><strong>Epost: </strong> Digitikk.media@gmail.com</li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i><strong class="mobil">Mobil: </strong> 94280490</li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-offset-4 col-md-4 text-center">
-                <p>All rights reserved &copy Vestad Web og Media 2017</br>www.digitikk.no. </br>&copy Espen Taftø Vestad</p>
             </div>
         </div>
     </div>

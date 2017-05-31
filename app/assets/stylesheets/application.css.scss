@@ -330,6 +330,7 @@ ul hr {
     padding: 0px 20px;
     width: 32%;
     margin: 7px;
+    margin-bottom: 20px;
     -webkit-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
@@ -337,7 +338,7 @@ ul hr {
     border-radius: 10px;
 }
 
-#services .col-1:hover, #services .col-2:hover, #services .col-3:hover, #services .col-md-12:hover {
+#services .col-1:hover, #services .col-2:hover, #services .col-3:hover, #services .col-md-6:hover {
     background-color: white;
     color: #72b01d;
     transition: 0.3s;
@@ -377,10 +378,10 @@ ul hr {
     margin-top: 30px;
 }
 
-#services .col-md-12 {
+#services .col-md-6 {
+    width: 49.5%;
     background-color: #f6f8f2;
     margin-top: 7px;
-    width: 98.8%;
     margin-left: 5px;
     margin-bottom: 50px;
     -webkit-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
@@ -439,13 +440,31 @@ ul hr {
     font-weight: 500;
 }
 
-#services .col-1 p, #services .col-2 p, #services .col-3 p, #services .col-md-12 p {
-    font-size: 17px;
-    line-height: 27px;
+#services .col-1 p, #services .col-2 p, #services .col-3 p, #services .col-md-6 p {
+    font-size: 20px;
+    line-height: 29px;
     font-family: 'Rubik', sans-serif;
     
 }
 
+#services .btn-order {
+    text-decoration: none;
+    background-color: #72b01d;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+#services .btn-order:hover {
+    background-color: white;
+    border: 1px solid #3f7d20;
+    color: #3f7d20;
+    transition: 0.3s;
+}
 
 
 /* PORTFOLIO SECTION */
@@ -493,7 +512,7 @@ ul hr {
 
 
 
-#portfolio .cv {
+#portfolio .cv-btn {
     color: #454955;
     padding: 10px;
     font-family: 'Rubik', sans-serif;
@@ -503,7 +522,7 @@ ul hr {
     transition: 0.2s;
 }
 
-#portfolio .cv:hover {
+#portfolio .cv-btn:hover {
     color: #3f7d21;
     font-size: 45px;
     font-weight: 600;
@@ -591,7 +610,7 @@ ul hr {
 .grafisk img {
     height: 230px;
     position: relative;
-    max-width: 100%;
+
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -616,6 +635,44 @@ ul hr {
 
 .scrolldiv img {
     width: 100%;
+}
+
+.cv .img-right img {
+    height: 80px;
+}
+
+.cv li {
+    display: inline-block;
+    padding: 30px 45px;
+}
+
+.cv h5 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Rubik', sans-seriff;
+    margin-left: 45px;
+    margin-bottom: 10px;
+}
+
+.languages {
+    margin-bottom: 30px;
+}
+
+.skills {
+    margin-bottom: 30px;
+}
+
+.skills h5 {
+    margin-top: 15px;
+}
+
+.cv i {
+    font-size: 15px !important;
+    color: #00af34 !important;
+}
+
+.courses {
+    margin-top: 45px;
 }
 
 /* ICONS SECTION */
@@ -663,6 +720,10 @@ ul hr {
     color: white;
     margin-top: 80px;
     margin-bottom: 10px;
+}
+
+.contact-title, .contact-p {
+    margin-left: 20px;
 }
 
 #map {
@@ -716,7 +777,10 @@ ul hr {
 }
 
 .contact-logo {
-    height: 70px;
+    height: 100px;
+    margin-left: -15px;
+    margin-top: -30px;
+    padding-bottom: 30px;
 }
 
 #contact p {
