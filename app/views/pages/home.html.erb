@@ -31,8 +31,7 @@
             <div class="cta-text">
                 <h1>Digitikk.no</h1>
                 <h2>Strøkent WebDesign.</h2>
-                <a href="#" class="btn-left">Utforsk</a>
-                <a href="#" class="btn-right">Portfolio</a>
+                <a class="hero-btn">Utforsk</a>
             </div>
             <div class="cta-img">
                 <%= image_tag("macs_edited_new.png") %>
@@ -82,31 +81,61 @@
         <div class="service-content">
             <div class="row">
                 <div class="col-md-4 col-1">
-                    <div class="i-bg-small text-center"><i class="fa fa-code text-center" aria-hidden="true"></i></div>
-                    <h4 class="text-center">Webløsninger</h4>
-                    <p>Digitikk.no skreddersyr webløsninger etter <strong>DINE</strong> behov! Fra strøkne design til fleksible webapplikasjoner til konkurransedyktige priser.</p>
+                    <div class="thumbnail">
+                        <div class="orders-bg web-solutions-bg text-center">
+                            <i class="fa fa-code text-center" aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                            <h4 class="text-center">Webløsninger</h4>
+                            <p>Digitikk.no skreddersyr webløsninger etter <strong>DINE</strong> behov! Fra strøkne design til fleksible webapplikasjoner til konkurransedyktige priser.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-2">
-                    <div class="i-bg-small text-center"><i class="fa fa-terminal text-center" aria-hidden="true"></i></div>
-                    <h4 class="text-center">Film og Videoredigering</h4>
-                    <p>Reklamefilmer, promoteringsvideoer, informasjonsvideoer og mye mer!</br></br></br></p>
+                    <div class="thumbnail">
+                        <div class="orders-bg video-solutions text-center">
+                            <i class="fa fa-video-camera text-center" aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                            <h4 class="text-center">Film og Videoredigering</h4>
+                            <p>Reklamefilmer, promoteringsvideoer, informasjonsvideoer og mye mer!</br></br></p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-3">
-                    <div class="i-bg-small text-center"><i class="fa fa-scissors text-center " aria-hidden="true"></i></div>
-                    <h4 class=text-center>VHS digitalisering</h4>
-                    <p>Har du noen gamle VHS kasetter liggende som du gjerne skulle ha spillt av? Digitikk.no konverterer disse til dagens formater til en rimelig penge.</p>
+                    <div class="thumbnail">
+                        <div class="orders-bg vhs-solutions text-center">
+                            <i class="fa fa-film text-center " aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                            <h4 class=text-center>VHS digitalisering</h4>
+                            <p>Har du noen gamle VHS kasetter liggende som du gjerne skulle ha spillt av? Digitikk.no konverterer disse til dagens formater til en rimelig penge.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row final-row">
                 <div class="col-md-6">
-                   <div class="i-bg-big text-center"><i class="fa fa-pencil text-center" aria-hidden="true"></i></div>
-                    <h4 class="text-center">Grafisk Design</h4>
-                    <p>Logoutvikling og visuell profilering av din bedrift. Å fremstå best mulig visuelt i markedsføringen er viktig!</p>
+                    <div class="thumbnail">
+                        <div class="orders-bg grafisk-solutions text-center">
+                            <i class="fa fa-pencil text-center" aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                            <h4 class="text-center">Grafisk Design</h4>
+                            <p>Logoutvikling og visuell profilering av din bedrift. Å fremstå best mulig visuelt i markedsføringen er viktig!</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="i-bg-big text-center"><i class="fa fa-video-camera text-center" aria-hidden="true"></i></div>
-                    <h4 class="text-center">Dronephoto</h4>
-                    <p>Film eller photo fra lufta! Jeg stiller med helt stabilt dronekamera i fantastisk 4k oppløsning.</p>
+                    <div class="thumbnail">
+                        <div class="orders-bg drone-solutions text-center">
+                            <i class="fa fa-location-arrow text-center" aria-hidden="true"></i>
+                        </div>
+                        <div class="caption">
+                            <h4 class="text-center">Dronephoto</h4>
+                            <p>Film eller photo fra lufta! Jeg stiller med helt stabilt dronekamera i fantastisk 4k oppløsning.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="text-center">
@@ -119,7 +148,7 @@
 <section id="portfolio">
     <div class="container">
         <h3 class="text-center">Portefølje</h3>
-        <p class="portfolio-info text-center">Her kan du se en liste over de ulike prosjektene jeg har laget.</p>
+        <p class="portfolio-info text-center">Her kan du se en liste over de ulike prosjektene jeg har laget. Trykk på de ulike ikonene for å se prosjekter innenfor ulike fagområder.</p>
         <div class="row category text-center">
             <div class="col-md-2">
                 <span class="i-bg "><i class="fa fa-code code-btn" aria-hidden="true"></i><p>Web</p></span>
@@ -136,8 +165,8 @@
             <div class="col-md-2 text-center">
                 <p class="cv-btn">CV</p>
             </div>
-            <div class="col-md-2">
-                <span class="i-bg"><i class="fa fa-youtube yt-btn" aria-hidden="true"></i><p>Youtube</p></span>
+            <div class="col-md-2 col-yt">
+                <a href="http://youtube.com/c/espurnorway"><span class="i-bg"><i class="fa fa-youtube yt-btn" aria-hidden="true"></i></a><p>Youtube</p></span>
             </div>
         </div>
         

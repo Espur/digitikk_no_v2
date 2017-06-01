@@ -33,6 +33,7 @@ $(document).ready(function() {
         $('.web, .video, .photo, .grafisk').hide();
     });
     
+    
     //ORDERS ANIMATIONS
     
     $('#grafisk-orders, #video-orders, #annet-orders').hide();
@@ -96,6 +97,12 @@ $(document).ready(function() {
     $('.nav-img').click(function() {
         $('html, body').animate({
             scrollTop: $('#hero').offset().top
+        }, 1500);
+    });
+    
+    $('.hero-btn').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
         }, 1500);
     });
     

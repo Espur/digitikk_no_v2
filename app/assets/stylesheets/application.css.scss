@@ -223,7 +223,7 @@ nav li a {
     border-radius: 15px;
 } */
 
-#hero .btn-left, .btn-right {
+#hero .hero-btn {
     background: transparent;
     border: 3px solid white;
     transition: 0.3s;
@@ -232,7 +232,7 @@ nav li a {
     color: white;
 }
 
-#hero .btn-left:hover, .btn-right:hover {
+#hero .hero-btn:hover {
     background-color: white;
     color: #3f7d20;
     border: 3px solid #3f7d20;
@@ -351,7 +351,7 @@ ul hr {
 }
 
 #services .fa {
-    font-size: 40px;
+    font-size: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
     color: white;
@@ -466,6 +466,50 @@ ul hr {
     transition: 0.3s;
 }
 
+.web-solutions-bg {
+    background-image: image-url('web_design.png');
+}
+
+.video-solutions {
+    background-image: image-url('premiere-min.png');
+}
+
+.vhs-solutions {
+    background-image: image-url('vhs.png');
+}
+
+
+.grafisk-solutions {
+    background-image: image-url('logo_utvikling.png');
+}
+
+
+.drone-solutions {
+    background-image: image-url('web_design.png');
+}
+
+#services .thumbnail:hover {
+    color: #3f7d20;
+    background-color: #f6f8f2;
+    transition: 0.3;
+}
+
+#services .thumbnail {
+    transition: 0.3s;
+}
+
+#services .thumbnail p:hover {
+    color: #3f7d20;
+    transition: 0.3s;
+}
+
+#services .thumbnail p {
+    transition: 0.3s;
+}
+
+i .current {
+    color: #3f7d20 !important;
+}
 
 /* PORTFOLIO SECTION */
 
@@ -484,14 +528,14 @@ ul hr {
 
 .portfolio-info {
     font-family: 'Rubik', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     font-weight: 200;
-    margin-bottom: 120px
+    margin-bottom: 120px;
 }
 
 #portfolio .fa {
-    color: #454955;
+
     font-size: 50px;
     padding: 10px;
     transition: 0.2s;
@@ -550,8 +594,8 @@ ul hr {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 25px;
+    line-height: 33px;
     text-shadow: 2px 2px #000;
     transition: 0.3s;
     position: absolute;
@@ -673,6 +717,12 @@ ul hr {
 
 .courses {
     margin-top: 45px;
+}
+
+.col-yt p {
+    font-family: 'Dosis', sans-seriff;
+    margin-top: 20px;
+    color: #7a7a7a;
 }
 
 /* ICONS SECTION */
