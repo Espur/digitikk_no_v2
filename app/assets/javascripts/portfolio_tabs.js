@@ -9,13 +9,13 @@ $(document).ready(function() {
     
     $('.code-btn').click(function() {
     $('.web').slideToggle();
-    $('.video, .photo, .grafisk, .cv').hide('slow');
+    $('.video, .photo, .grafisk, .cv').hide();
     
     });
     
     $('.video-btn').click(function() {
         $('.video').slideToggle();
-        $('.web, .photo, .grafisk, .cv').hide('slow');
+        $('.web, .photo, .grafisk, .cv').hide();
     });
     
     $('.camera-btn').click(function() {
