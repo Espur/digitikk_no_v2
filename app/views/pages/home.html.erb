@@ -8,16 +8,25 @@
     
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <div class="nav-logo pull-left">
-                <%= image_tag("left-logo-long-text.png", class: 'nav-img') %>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <q class="nav-logo pull-left navbar-brand">
+                    <%= image_tag("left-logo-long-text.png", class: 'nav-img') %>
+                </a>
             </div>
-            <div class="nav-content pull-right">
-                <ul class="nav">
+            
+            <div class="nav-content pull-right collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
                     <a id="nav-about"><li class="li-txt">om</li></a>
                     <a id="nav-services"><li class="li-txt">tjenester</li></a>
                     <a id="nav-portfolio"><li class="li-txt">portefølje</li></a>
                     <a id="nav-contact"><li class="li-txt">kontakt</li></a>
-                    <li class="li-txt"><%= link_to 'Bestill', new_order_path, class: 'li-txt' %></li>
+                    <a href="/orders/new"><li class="li-txt">bestill</li></a>
                 </ul>
             </div>
         </div>
