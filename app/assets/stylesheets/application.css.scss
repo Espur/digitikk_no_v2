@@ -127,12 +127,22 @@ ol li {
 
 
 #hero {
-    background-image: linear-gradient(rgba(114, 176, 29, 1), rgba(0, 0, 0, 0.6)), image-url("aalesund.png");
+
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     height: 980px;
     text-decoration: none;
+
+}
+
+#hero video {
+    width: 100%;
+    z-index: -200;
+    height: 100.2%;
+    min-width: 100% !important;
+    position: absolute;
+    min-height: 100.2%;
 
 }
 
@@ -163,23 +173,23 @@ nav li a {
 }
 
 #hero h1 {
-    font-size: 93px;
+    font-size: 120px;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #hero h2 {
-    font-size: 34px;
+    font-size: 25px;
     font-weight: 400;
     font-family: 'Dosis', sans-serif;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .cta-text {
     margin-top: 250px;
     color: white;
-    margin-bottom: 50px;
+
 }
 
 .cta {
@@ -187,8 +197,9 @@ nav li a {
 }
 
 .cta-img img {
-    height: 450px;
-    margin-left: 70px
+    height: 500px;
+    margin-left: 70px;
+    margin-top: -20px;
 }
 
 .navbar-fixed-top.scrolled {
@@ -241,8 +252,30 @@ nav li a {
 
 }
 
+#hero .hero-btn-order {
+    background: transparent;
+    border: 3px solid white;
+    transition: 0.3s;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+#hero .hero-btn-order:hover {
+    background-color: white;
+    color: #3f7d20;
+    border: 3px solid #3f7d20;
+    transition: 0.3s;
+
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 
 /* ABOUT SECTION */
+
 
 
 #about img {
@@ -275,7 +308,7 @@ nav li a {
     font-size: 16px;
     font-family: 'Dosis', sans-serif;
     padding: 20px;
-    width: 45%;
+
     color: #7a7a7a;
     padding-bottom: 10px;
     
@@ -286,19 +319,8 @@ nav li a {
     font-size: 25px;
 }
 
-ul hr {
-    width: 35%;
-    margin-right: 350px
-}
 
-#about ul {
-    width: 80%;
-    position: absolute;
-}
 
-.values-right {
-    margin-left: 300px
-}
 
 
 
@@ -327,20 +349,16 @@ ul hr {
 }
 
 #services .col-1, #services .col-2, #services .col-3 {
-    background-color: #f6f8f2;
+
     padding: 0px 20px;
-    width: 32%;
-    margin: 7px;
     margin-bottom: 20px;
-    -webkit-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+
     transition: 0.3s;
     border-radius: 10px;
 }
 
 #services .col-1:hover, #services .col-2:hover, #services .col-3:hover, #services .col-md-6:hover {
-    background-color: white;
+
     color: #72b01d;
     transition: 0.3s;
 }
@@ -380,14 +398,12 @@ ul hr {
 }
 
 #services .col-md-6 {
+
     width: 49.5%;
-    background-color: #f6f8f2;
     margin-top: 7px;
     margin-left: 5px;
     margin-bottom: 50px;
-    -webkit-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 9px 10px 5px 0px rgba(0,0,0,0.75);
+
     transition: 0.3s;
     border-radius: 10px;
 }
@@ -540,6 +556,7 @@ i .current {
     font-size: 50px;
     padding: 10px;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 #portfolio .fa:hover {
@@ -854,6 +871,14 @@ i .current {
 /* ORDERS PAGE */
 
 
+.usynlig {
+    display: none;
+}
+
+.synlig {
+    display: visible;
+}
+
 .orders-bg {
     width: 100%;
     height: 200px;
@@ -1015,7 +1040,6 @@ i .current {
 .btn-group select:hover {
     color: #428bca;
     background-color: white;
-    border: 2px solid #428bca;
     transition: 0.3s;
 }
 
@@ -1092,129 +1116,500 @@ p.terms {
 }
 
 
-/* MODAL CSS */
+/* RESPONSIVNESS */
 
-
-
-.row > .column {
-  padding: 0 8px;
+@media only screen and (max-width: 1850px) {
+    
+    #hero video {
+        margin-top: -40px;
+    }
+    
+    .cta-img img {
+        height: 430px;
+    }
+    
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+@media only screen and (max-width: 1780px) {
+    
+    .cta-img img {
+        height: 400px;
+    }
+    
 }
 
-.column {
-  float: left;
-  width: 25%;
+@media only screen and (max-width: 1700px) {
+    
+    .cta-img img {
+        height: 330px;
+    }
+    
+    #hero video {
+        margin-top: -80px;
+    }
+    
+    #about {
+        margin-top: -100px;
+    }
+    
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
+@media only screen and (max-width: 1600px) {
+    
+    #about h3 {
+        margin-top: 10px
+    }   
+    
 }
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
+@media only screen and (max-width: 1580px) {
+    
+    #hero .cta-text {
+        margin-top:  250px;
+    }
+    
+    #hero .cta-text h1 {
+        font-size: 80px;
+    }
+    
+    #hero video {
+        margin-top: -100px;
+    }
 }
 
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
+@media only screen and (max-width: 1500px) {
+    
+    #portfolio .portphoto:hover {
+        -moz-transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+    }
 }
 
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
+@media only screen and (max-width: 1509px) {
+    
+    #about h3 {
+        margin-top: -80px;
+    }
+    
 }
 
-.mySlides {
-  display: none;
+@media only screen and (max-width: 1490px) {
+    
+    #hero .cta-text {
+        display: inline-block;
+        margin-top: 130px;
+
+    }
+    
+    #hero .cta-img img {
+        margin-top: -200px;
+
+    }
+    
+    #hero video {
+        margin-top: -150px;
+    }
+    
+    .premiere {
+        height: 200px;
+    }
+    
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+
+@media only screen and (max-width: 1300px) {
+    
+    #hero video {
+        margin-top: -160px;
+    }
+    
+    #hero .cta-text {
+        margin-top: 70px;
+    }
+    
+    #hero .cta-img img {
+        margin-top: -100px;
+        height: 290px;
+    }
+    
+    #about h3 {
+        margin-top: -200px;
+    }
+    
+    
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+@media only screen and (max-width: 1250px) {
+    
+   #hero video {
+        margin-top: -170px;
+    }
+    
+    #about h3 {
+        margin-top: -200px;
+    }
+    
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+@media only screen and (max-width: 1218px) {
+    
+   .cv .img-right img {
+       height: 40px;
+   }
+   
+   .cv h5 {
+       margin-top: 40px;
+   }
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+@media only screen and (max-width: 1216px) {
+    
+    #hero video {
+        margin-top: -180px;
+    }
+    
+    #hero .cta-text h1 {
+        font-size: 70px;
+
+    }
+    
+    #hero .cta-text h2 {
+        font-size: 18px;
+
+    }
+    
+    #hero .cta-text a {
+        font-size: 13px;
+    }
+    
+    .hero-btn, .hero-btn-order {
+        padding: 10px 15px;
+    }
+    
+    #hero .cta-text {
+        margin-top: 50px;
+    }
+    
+    #about hr {
+        display: none;
+    }
+    
+    #about li {
+        font-size: 12px;
+    }
+    
+    #services .col-1 {
+        
+    }
+    
+    #contact li {
+        font-size: 13px;
+        line-height: 0px;
+    }
 }
 
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
+@media only screen and (max-width: 1165px) {
+    
+    #hero video {
+        margin-top: -200px;
+    }
+    
 }
 
-img.demo {
-  opacity: 0.6;
+@media only screen and (max-width: 1140px) {
+    
+    #hero .cta-img img {
+        height: 240px;
+    }
+    
 }
 
-.active,
-.demo:hover {
-  opacity: 1;
+
+@media only screen and (max-width: 1080px) {
+    
+    #hero video {
+        margin-top: -220px;
+    }
+    
+    #hero .cta-img img {
+        height: 210px;
+    }
+    
+    #hero .cta-text a {
+        padding: 10px 15px;
+    }
+    
 }
 
-img.hover-shadow {
-  transition: 0.3s
+@media only screen and (max-width: 1027px) {
+    
+    #about h3 {
+        margin-top: 210px;
+    }
+    
+    #hero .li-txt {
+        font-size: 10px;
+        padding: 12px 14px;
+    }
+    
+    #hero .nav-img {
+        height: 40px;
+        padding-top: 10px;
+    }
+    
 }
 
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+@media only screen and (max-width: 1009px) {
+    
+    #hero video {
+        display: none;
+    }
+    
+    #hero .cta-img {
+        text-align: center !important;
+        margin-top: 150px;
+        height: 270px;
+    }
+    
+    #hero {
+        background-image: image-url('tjenester-min.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 700px;
+        
+    }
+    
+    
+    #hero .cta {
+        text-align: center !important;
+    }
+    
+    #hero .cta .cta-text {
+        text-align: center !important;
+    }
+    
+    #about img {
+        display: none;
+    }
+    
+    #about .col-left {
+        margin-bottom: 300px;
+        
+    }
+    
+    #about li {
+        width: 100%;
+    }
+    
+    .bg-with-txt img {
+        width: 50%;
+        
+    }
+    
+    .overlay {
+        display: none;
+    }
+    
+    #portfolio .portphoto:hover {
+        right: 160px;
+    }
+    
+    .grafisk h5 {
+        margin-bottom: 40px;
+    }
+    
+    .grafisk img:hover {
+           -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+    }
+    
+    
+    #contact .btn {
+        margin-bottom: 25px;
+    }
+    
+    #contact .contact-icons {
+        text-align: center !important;
+    }
+}
+
+
+@media only screen and (max-width: 785px) {
+    
+    .nav-content .li-txt {
+        display: none;
+    }
+    
+    #hero button {
+        display: none;
+    }
+    
+    #hero .nav-logo img {
+        display: none;
+    }
+    
+    #hero .nav-logo {
+        display: none;
+    }
+    
+    nav {
+        display: none;
+    }
+    
+    #icons i {
+        margin-top: -40px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    #portfolio .fa {
+        font-size: 25px;
+    }
+    
+    #portfolio span p {
+        font-size: 14px;
+    }
+    
+    #portfolio .cv-btn {
+        font-size: 25px;
+    }
+    
+    .grafisk img {
+        height: 100px;
+    }
+    
+    #services h3 {
+        font-size: 50px;
+    }
+    
+    #about h3 {
+        font-size: 50px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    
+    #hero .cta-img img {
+        display: none;
+    } 
+    
+    #hero {
+        height: 500px;
+    }
+    
+    #hero .cta-text h1 {
+        font-size: 40px;
+    }
+    
+    #hero .cta-text h2 {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #portfolio {
+        display: none;
+    }
+    
+    
+    
+}
+
+
+
+
+/* RESPONSIVE HEIGHT */
+
+
+@media only screen and (max-height: 920px) {
+    
+    #hero .cta-text {
+        margin-top: 50px;
+    }
+    
+    #about h3 {
+        margin-top: -200px;
+    }
+    
+    
+    
+}
+
+
+@media only screen and (max-height: 770px) {
+    
+    #hero .cta-text {
+        margin-top: 20px;
+    }
+    
+    #hero h1 {
+        font-size: 70px;
+    }
+    
+    #hero h2 {
+        font-size: 25px;
+    }
+    
+    #hero .cta-text a {
+        padding: 10px 15px;
+    }
+    
+    #hero video {
+        min-width: 100% !important;
+    }
+    
+
+    
+    
+}
+
+@media only screen and (max-height: 740px) {
+    
+    #hero video {
+        display: none;
+    }
+    
+    #hero {
+        background-image: image-url('tjenester-min.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 650px;
+        background-attachment: fixed;
+    }
+    
+    #about h3 {
+        margin-top: 150px;
+    }
+    
+
+    
+    
+}
+
+@media only screen and (max-height: 800px) {
+    
+    .utvidet-info img {
+        padding-top: 50px;
+    }
+    
+    .orders-desc-p {
+        padding-bottom: 60px;
+    }
+    
+
+    
+    
 }

@@ -1,11 +1,90 @@
+<head>
+    <script>
+        $(document).ready(function() {
+    
+    //PORTFOLIO ANIMATIONS
+    
+    $('.video').hide();
+    $('.photo').hide();
+    $('.grafisk').hide();
+    $('.cv').hide();
+    
+    
+    $('.code-btn').click(function() {
+    $('.web').slideToggle();
+    $('.video, .photo, .grafisk, .cv').hide();
+    
+    });
+    
+    $('.video-btn').click(function() {
+        $('.video').slideToggle();
+        $('.web, .photo, .grafisk, .cv').hide();
+    });
+    
+    
+    $('.camera-btn').click(function() {
+        $('.photo').slideToggle();
+        $('.web, .video, .grafisk, .cv').hide();
+    });
+    
+    $('.pencil-btn').click(function() {
+        $('.grafisk').slideToggle();
+        $('.web, .video, .photo, .cv').hide();
+    });
+    
+    $('.cv-btn').click(function() {
+        $('.cv').slideToggle();
+        $('.web, .video, .photo, .grafisk').hide();
+    });
+    
+    
+    //ORDERS ANIMATIONS
+    
+    
+    
+    // SCROLL SECTION ANIMATIONS
+    
+    $('#nav-about').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
+        }, 1500);
+    });
+    
+    $('#nav-services').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#services').offset().top
+        }, 1500);
+    });
+    
+    $('#nav-portfolio').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#portfolio').offset().top
+        }, 1500);
+    });
+    
+    $('#nav-contact').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top
+        }, 1500);
+    });
+    
+    $('.nav-img').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#hero').offset().top
+        }, 1500);
+    });
+    
+    $('.hero-btn').click(function() {
+        $('html, body').animate({
+            scrollTop: $('#about').offset().top
+        }, 1500);
+    });
+    
+});
+    </script>
+</head>
+
 <section id="hero">
-    <!-- <div class="header-video">
-        <video preload="preload" id="video" autoplay="autoplay" loop="loop">
-            <source src="media/header_video.mp4" type="video/mp4">
-        </video>
-    </div> -->
-    
-    
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -15,8 +94,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <q class="nav-logo pull-left navbar-brand">
-                    <%= image_tag("left-logo-long-text.png", class: 'nav-img') %>
+                <a class="nav-logo pull-left navbar-brand">
+                    <%= image_tag("left-logo-long-text.png", class: 'nav-img img-responsive') %>
                 </a>
             </div>
             
@@ -26,23 +105,26 @@
                     <a id="nav-services"><li class="li-txt">tjenester</li></a>
                     <a id="nav-portfolio"><li class="li-txt">portefølje</li></a>
                     <a id="nav-contact"><li class="li-txt">kontakt</li></a>
-                    <a href="/orders/new"><li class="li-txt">bestill</li></a>
+                    <a href="/orders/new" id="nav-order"><li class="li-txt">bestill</li></a>
                 </ul>
             </div>
         </div>
     </nav>
     
+    <%= video_tag "Digitikk_header_video_1.mp4", :controls => false, autoplay: :autoplay, loop: :loop, mute: :mute %>
+    
     <div class="container">
         <% flash.each do |key, value| %>
             <%= content_tag :div, value, class: "alert alert-#{key}" %>
         <% end %>
-        <div class="cta text-center">
-            <div class="cta-text">
+        <div class="cta">
+            <div class="cta-text text-left">
                 <h1>Digitikk.no</h1>
-                <h2>Strøkent WebDesign.</h2>
+                <h2>Webdesign - Film - Grafisk Profilering</h2>
                 <a class="hero-btn">Utforsk</a>
+                <%= link_to "Bestill", new_order_path, class: 'hero-btn-order' %>
             </div>
-            <div class="cta-img">
+            <div class="cta-img text-right">
                 <%= image_tag("macs_edited_new.png") %>
             </div>
         </div>
@@ -58,21 +140,21 @@
         <div class="row">
             <div class="col-md-6 col-left">
                 <p>Digitikk's formål er å hjelpe bedrifter, små virksomheter, og privatpersoner med mangel på programvare og IT. Å framstå visuelt synlig som bedrift er avgjørende for din markedsføring, og kan være vanskelig å få til. Da er Digitikk din hjelpende hånd i hverdagen, enten du er på utkikk etter nettsted, reklamefilm eller grafisk design! Digitikk.no drives av Espen Taftø Vestad under <strong>Vestad Web og Media.</strong></p>
-                <ul class="values-left">
+                <ul class="values-left pull-left">
                     <li><i class="fa fa-file-code-o fa-fw" aria-hidden="true"></i>Web Designer</li>
-                    <hr class="underline-left">
+
                     <li><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i>Video Editor</li>
-                    <hr class="underline-right">
+
                     <li><i class="fa fa-terminal fa-fw" aria-hidden="true"></i>Back-end utvikler</li>
-                    <hr class="underline-left">
+
                 </ul>
-                <ul class="values-right">
+                <ul class="values-right pull-right">
                     <li><i class="fa fa-youtube-play fa-fw" aria-hidden="true"></i>Youtuber</li>
-                    <hr class="underline-right">
+
                     <li><i class="fa fa-trademark fa-fw" aria-hidden="true"></i>Branding</li>
-                    <hr class="underline-left">
+
                     <li><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>Grafisk Design</li>
-                    <hr class="underline-right">
+
                 </ul>
             </div>
             <div class="col-md-6 col-right text-right">
@@ -89,7 +171,7 @@
         </div>
         <div class="service-content">
             <div class="row">
-                <div class="col-md-4 col-1">
+                <div class="col-lg-4 col-1">
                     <div class="thumbnail">
                         <div class="orders-bg web-solutions-bg text-center">
                             <i class="fa fa-code text-center" aria-hidden="true"></i>
@@ -100,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-2">
+                <div class="col-lg-4 col-2">
                     <div class="thumbnail">
                         <div class="orders-bg video-solutions text-center">
                             <i class="fa fa-video-camera text-center" aria-hidden="true"></i>
@@ -111,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-3">
+                <div class="col-lg-4 col-3">
                     <div class="thumbnail">
                         <div class="orders-bg vhs-solutions text-center">
                             <i class="fa fa-film text-center " aria-hidden="true"></i>
@@ -124,7 +206,7 @@
                 </div>
             </div>
             <div class="row final-row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="thumbnail">
                         <div class="orders-bg grafisk-solutions text-center">
                             <i class="fa fa-pencil text-center" aria-hidden="true"></i>
@@ -135,7 +217,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="thumbnail">
                         <div class="orders-bg drone-solutions text-center">
                             <i class="fa fa-location-arrow text-center" aria-hidden="true"></i>
@@ -159,22 +241,22 @@
         <h3 class="text-center">Portefølje</h3>
         <p class="portfolio-info text-center">Her kan du se en liste over de ulike prosjektene jeg har laget. Trykk på de ulike ikonene for å se prosjekter innenfor ulike fagområder.</p>
         <div class="row category text-center">
-            <div class="col-md-2">
+            <div class="col-xs-2">
                 <span class="i-bg "><i class="fa fa-code code-btn" aria-hidden="true"></i><p>Web</p></span>
             </div>
-            <div class="col-md-2">
+            <div class="col-xs-2">
                 <span class="i-bg"><i class="fa fa-film video-btn" aria-hidden="true"></i><p>Video</p></span>
             </div>
-            <div class="col-md-2">
+            <div class="col-xs-2">
                 <span class="i-bg"><i class="fa fa-camera-retro camera-btn" aria-hidden="true"></i><p>Foto</p></span>
             </div>
-            <div class="col-md-2">
+            <div class="col-xs-2">
                 <span class="i-bg"><i class="fa fa-pencil pencil-btn" aria-hidden="true"></i><p>Grafisk</p></span>
             </div>
-            <div class="col-md-2 text-center">
+            <div class="col-xs-2 text-center">
                 <p class="cv-btn">CV</p>
             </div>
-            <div class="col-md-2 col-yt">
+            <div class="col-xs-2 col-yt">
                 <a href="http://youtube.com/c/espurnorway"><span class="i-bg"><i class="fa fa-youtube yt-btn" aria-hidden="true"></i></a><p>Youtube</p></span>
             </div>
         </div>
@@ -186,8 +268,8 @@
                 <div class="col-md-3">
                     <a href="http://warm-ravine-18984.herokuapp.com/" target="_blank">
                         <div class="bg-with-txt fruitcake">
-                            <%= image_tag("fruitcake.png", data_lightbox: 'image-1') %>
-                            <div class="overlay">
+                            <%= image_tag("fruitcake.png") %>
+                            <div class="overlay text-center">
                                 <p class="img-txt">Fruitcake</p>
                             </div>
                         </div>
@@ -436,19 +518,19 @@
 <section id="icons">
     <div class="container">
         <div class="row text-center">
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <i class="fa fa-handshake-o" aria-hidden="true"></i>
                 <h4>Fleksible Løsninger</h4>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <i class="fa fa-diamond" aria-hidden="true"></i>
                 <h4>Lekkert!</h4>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <i class="fa fa-paint-brush" aria-hidden="true"></i>
                 <h4>Skreddersydde Design</h4>
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-3">
                 <i class="fa fa-cog fa-spin" aria-hidden="true"></i>
                 <h4>Optimalisert</h4>
             </div>
@@ -466,17 +548,17 @@
                 <%= form_for @contact, url: contact_pages_path do |f| %>
                     <div class="form-group">
                         <%= f.label :navn %>
-                        <%= f.text_field :navn, class: 'form-control' %>
+                        <%= f.text_field :navn, class: 'form-control', placeholder: 'Ditt fulle navn' %>
                     </div>
                     
                     <div class="form-group">
                         <%= f.label :epost %>
-                        <%= f.email_field :epost, class: 'form-control' %>
+                        <%= f.email_field :epost, class: 'form-control', placeholder: 'Din epost adresse' %>
                     </div>
                     
                     <div class="form-group">
                         <%= f.label :comments %>
-                        <%= f.text_area :comments, class: 'form-control' %>
+                        <%= f.text_area :comments, class: 'form-control', placeholder: 'Hva kan jeg hjelpe deg med?' %>
                     </div>
                     <%= f.submit 'Send Inn', class: 'btn btn-success'  %>
                 <% end %>
@@ -496,6 +578,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 <script async defer

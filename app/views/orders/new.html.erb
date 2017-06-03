@@ -1,3 +1,39 @@
+<head>
+  <script>
+    $(document).ready(function() {
+      $('#grafisk-orders, #video-orders, #annet-orders').hide();
+    
+    $('.grafisk-tab').click(function() {
+        $('.grafisk-tab').addClass('active');
+        $('.web-tab, .video-tab, .annet-tab').removeClass('active')
+        $('#grafisk-orders').toggle();
+        $('#web-orders, #video-orders, #annet-orders').hide();
+    });
+    
+    $('.video-tab').click(function() {
+        $('.video-tab').addClass('active');
+        $('.web-tab, .grafisk-tab, .annet-tab').removeClass('active');
+        $('#video-orders').toggle();
+        $('#web-orders, #grafisk-orders, #annet-orders').hide();
+    });
+    
+    $('.web-tab').click(function() {
+        $('.web-tab').addClass('active');
+        $('.grafisk-tab, .video-tab, .annet-tab').removeClass('active');
+        $('#web-orders').toggle();
+        $('#grafisk-orders, #video-orders, #annet-orders').hide();
+    });
+    
+    $('.annet-tab').click(function() {
+        $('.annet-tab').addClass('active');
+        $('.web-tab, grafisk-tab, video-tab').removeClass('active');
+        $('#annet-orders').toggle();
+        $('#web-orders, #grafisk-orders, #video-orders').hide();
+    }); 
+    });
+  </script>
+</head>
+
 <nav class="navbar navbar-default orders-nav">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -93,7 +129,7 @@
                 <td class="red"><i class="fa fa-times" aria-hidden="true"></i></td>
               </tr>
               <tr>
-                <td>Betaling med kort</td>
+                <td>Kortbetaling for kunder</td>
                 <td class="red"><i class="fa fa-times" aria-hidden="true"></i></td>
               </tr>
             </table>
@@ -112,7 +148,7 @@
               </tr>
               <tr>
                 <td>Logo</td>
-                <td>+ 1500,-</td>
+                <td>+ 990,-</td>
               </tr>
               <tr>
                 <td>Drift</td>
@@ -140,7 +176,7 @@
                 <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
-                <td>Opp til 5 sider</td>
+                <td>Uendelig antall sider</td>
                 <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
@@ -168,7 +204,7 @@
                 <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
               <tr>
-                <td>Betaling med kort</td>
+                <td>Kortbetaling for kunder</td>
                 <td class="green"><i class="fa fa-check" aria-hidden="true"></i></td>
               </tr>
             </table>
@@ -187,7 +223,7 @@
               </tr>
               <tr>
                 <td>Logo</td>
-                <td>+ 1500,-</td>
+                <td>+ 990,-</td>
               </tr>
               <tr>
                 <td>Drift</td>
@@ -238,22 +274,22 @@
           <%= form_for @order do |f| %>
             <div class="form-group">
               <%= f.label :fornavn %>
-              <%= f.text_field :fornavn, class: 'form-control' %>
+              <%= f.text_field :fornavn, class: 'form-control', placeholder: 'Ditt fornavn' %>
             </div>
             
             <div class="form-group">
               <%= f.label :etternavn %>
-              <%= f.text_field :etternavn, class: 'form-control' %>
+              <%= f.text_field :etternavn, class: 'form-control', placeholder: 'Ditt etternavn' %>
             </div>
             
             <div class="form-group">
               <%= f.label :email %>
-              <%= f.email_field :email, class: 'form-control' %>
+              <%= f.email_field :email, class: 'form-control', placeholder: 'Din epost' %>
             </div>
             
             <div class="form-group">
               <%= f.label :mobil %>
-              <%= f.number_field :mobil, class: 'form-control' %>
+              <%= f.number_field :mobil, class: 'form-control', placeholder: 'Ditt mobilnummer' %>
             </div>
             
             <div class="btn-group">
@@ -263,11 +299,11 @@
             
             <div class="form-group">
               <%= f.label :beskrivelse %>
-              <%= f.text_area :beskrivelse, class: 'form-control' %>
+              <%= f.text_area :beskrivelse, class: 'form-control', placeholder: 'Beskriv tjenesten du ønsker' %>
             </div>
             
             <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
-            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", "https://forbrukerombudet.no/lov-og-rett/veiledninger-og-retningslinjer/2179-2" %></p>
           <% end %>
         </div>
       </div>
@@ -284,7 +320,7 @@
             <p class="orders-desc-p"><strong>Lekker</strong> pakken passer perfekt til deg som er selvstendig næringsdrivende, privatperson eller driver en mindre virksomhet. Siden vil inneholde all nødvendig informasjon om dine tjenester eller produkter. Samtidig som nettsiden vil ha et interessevekkende design, vil det også være mulig for kunder å kontakte deg gjennom kontaktskjema på mail.</p>
           </div>
           <div class="col-md-offset-3 col-md-5">
-            <%= image_tag("web_design-min.png", class: 'web-design-icons') %>
+            <%= image_tag("web_design-min.png", class: 'web-design-icons img-responsive') %>
           </div>
         </div>
       </div>
@@ -294,7 +330,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <%= image_tag("macs_edited_new.png", class: 'web-info-mac') %>
+            <%= image_tag("macs_edited_new.png", class: 'web-info-mac img-responsive') %>
           </div>
           <div class="col-md-offset-3 col-md-5">
             <h3>Fabelaktig</h3>
@@ -312,7 +348,7 @@
             <p class="orders-desc-p">Trenger du vedlikehold eller oppgraderinger på eksisterende nettsted eller sosiale medier? Da hjelper jeg deg gladlig! Beskriv i kontakt skjema nedenfor hvilke utfordringer du ønsker assistanse i, og vi finner en ordning på det.</p>
           </div>
           <div class="col-md-offset-3 col-md-5">
-            <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac') %>
+            <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac img-responsive') %>
           </div>
         </div>
       </div>
@@ -454,22 +490,22 @@
           <%= form_for @order do |f| %>
             <div class="form-group">
               <%= f.label :fornavn %>
-              <%= f.text_field :fornavn, class: 'form-control' %>
+              <%= f.text_field :fornavn, class: 'form-control', placeholder: 'Ditt fornavn' %>
             </div>
             
             <div class="form-group">
               <%= f.label :etternavn %>
-              <%= f.text_field :fornavn, class: 'form-control' %>
+              <%= f.text_field :etternavn, class: 'form-control', placeholder: 'Ditt etternavn' %>
             </div>
             
             <div class="form-group">
               <%= f.label :email %>
-              <%= f.email_field :email, class: 'form-control' %>
+              <%= f.email_field :email, class: 'form-control', placeholder: 'Din epost' %>
             </div>
             
             <div class="form-group">
               <%= f.label :mobil %>
-              <%= f.number_field :mobil, class: 'form-control' %>
+              <%= f.number_field :mobil, class: 'form-control', placeholder: 'Ditt mobilnummer' %>
             </div>
             
             <div class="btn-group">
@@ -479,11 +515,11 @@
             
             <div class="form-group">
               <%= f.label :beskrivelse %>
-              <%= f.text_area :beskrivelse, class: 'form-control' %>
+              <%= f.text_area :beskrivelse, class: 'form-control', placeholder: 'Beskriv tjenesten du ønsker' %>
             </div>
             
             <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
-            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", "https://forbrukerombudet.no/lov-og-rett/veiledninger-og-retningslinjer/2179-2" %></p>
           <% end %>
         </div>
       </div>
@@ -510,7 +546,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <%= image_tag("profilmanual_ms_ub-min.png", class: 'pm_ms_ub') %>
+            <%= image_tag("profilmanual_ms_ub-min.png", class: 'pm_ms_ub img-responsive') %>
           </div>
           <div class="col-md-offset-3 col-md-5">
             <h3>Profilmanual</h3>
@@ -542,7 +578,7 @@
       <div class="col-sm-4">
         <div class="thumbnail">
           <div class="orders-bg editing-bg text-center">
-            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <i class="fa fa-scissors" aria-hidden="true"></i>
           </div>
           <div class="caption">
             <h2 class="orders-desc-h2 text-center">Videoredigering</h2>
@@ -586,7 +622,7 @@
       <div class="col-sm-4">
         <div class="thumbnail">
           <div class="orders-bg film-bg text-center">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
           </div>
           <div class="caption">
             <h2 class="orders-desc-h2 text-center">Film & Klipp</h2>
@@ -615,7 +651,7 @@
       <div class="col-sm-4">
         <div class="thumbnail">
           <div class="orders-bg vhs-bg text-center">
-            <i class="fa fa-address-card" aria-hidden="true"></i>
+            <i class="fa fa-film" aria-hidden="true"></i>
           </div>
           <div class="caption">
             <h2 class="orders-desc-h2 text-center">VHS Digitalisering</h2>
@@ -652,22 +688,22 @@
           <%= form_for @order do |f| %>
             <div class="form-group">
               <%= f.label :fornavn %>
-              <%= f.text_field :fornavn, class: 'form-control' %>
+              <%= f.text_field :fornavn, class: 'form-control', placeholder: 'Ditt fornavn' %>
             </div>
             
             <div class="form-group">
               <%= f.label :etternavn %>
-              <%= f.text_field :fornavn, class: 'form-control' %>
+              <%= f.text_field :etternavn, class: 'form-control', placeholder: 'Ditt etternavn' %>
             </div>
             
             <div class="form-group">
               <%= f.label :email %>
-              <%= f.email_field :email, class: 'form-control' %>
+              <%= f.email_field :email, class: 'form-control', placeholder: 'Din epost' %>
             </div>
             
             <div class="form-group">
               <%= f.label :mobil %>
-              <%= f.number_field :mobil, class: 'form-control' %>
+              <%= f.number_field :mobil, class: 'form-control', placeholder: 'Ditt mobilnummer' %>
             </div>
             
             <div class="btn-group">
@@ -677,11 +713,11 @@
             
             <div class="form-group">
               <%= f.label :beskrivelse %>
-              <%= f.text_area :beskrivelse, class: 'form-control' %>
+              <%= f.text_area :beskrivelse, class: 'form-control', placeholder: 'Beskriv tjenesten du ønsker' %>
             </div>
             
             <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
-            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+            <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", "https://forbrukerombudet.no/lov-og-rett/veiledninger-og-retningslinjer/2179-2" %></p>
           <% end %>
         </div>
       </div>
@@ -698,7 +734,7 @@
             <p class="orders-desc-p">En appellerende reklame / promoteringsfilm er viktig materiell for din markedsføring. I startfasen utvikles en plan i samarbeid med kunde på hvordan din video skal appelere best mulig til potensielle kunder / målgruppe. Denne planen vil inneholde informasjon om videoens budskap, målgruppe, mediekanal og virkemidler som skal bruers. Videoen leveres i ønsket format tilpasset ønsket kanal. har du allerede film liggende som skal redigeres, tar jeg gjerne i mot dette gjennom nett.</br></br>Digitikk.no baserer seg i Ålesund. Dersom du behøver full produksjon av film-materiell er det bare å ta kontakt for mer informasjon.</p>
           </div>
           <div class="col-md-offset-3 col-md-5">
-            <%= image_tag("premiere-min.png", class: 'premiere orders-info-imgs') %>
+            <%= image_tag("premiere-min.png", class: 'premiere orders-info-imgs img-responsive') %>
           </div>
         </div>
       </div>
@@ -761,7 +797,7 @@
           
           <div class="text-center">
           <%= f.submit 'Send Inn', class: 'btn btn-send-order' %>
-          <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", terms_path %></p>
+          <p class="terms">Ved å trykke "Send Inn", aksepterer du Digtikk.no sine <%= link_to "kjøpsvilkår", "https://forbrukerombudet.no/lov-og-rett/veiledninger-og-retningslinjer/2179-2" %></p>
           </div>
         <% end %>
       </div>
