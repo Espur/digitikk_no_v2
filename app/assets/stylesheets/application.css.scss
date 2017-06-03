@@ -1529,6 +1529,71 @@ p.terms {
 }
 
 
+@media only screen and (max-width: 3500px) {
+    
+    #hero video {
+        margin-top: -740px;
+    }
+    
+    #hero h3 {
+        margin-top: 1000px;
+    }
+    
+    
+    
+    
+}
+
+@media only screen and (max-width: 2600px) {
+    
+    #hero video {
+        margin-top: -350px;
+    }
+    
+    #hero h3 {
+        margin-top: 1000px;
+    }
+    
+    
+    
+    
+}
+
+@media only screen and (max-width: 2300px) {
+    
+    #hero video {
+        margin-top: -150px;
+    }
+    
+    #hero h3 {
+        margin-top: 1000px;
+    }
+    
+    #hero .cta-img img {
+        height: 420px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 1900px) {
+    
+    #hero video {
+        margin-top: -25px;
+    }
+    
+    #hero h3 {
+        margin-top: 700px;
+    }
+    
+    #hero .cta-img img {
+        height: 400px;
+    }
+    
+    
+}
+
+
 
 
 /* RESPONSIVE HEIGHT */
