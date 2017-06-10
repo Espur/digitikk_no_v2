@@ -15,7 +15,9 @@ $(function () {
 $(window).scroll(function() {
     if ($(this).scrollTop() > 200) {
         $( ".nav-img" ).fadeIn();
+        $("#hero .icon-bar").css("background-color", "#72b01d");
     } else {
         $( ".nav-img" ).fadeOut;
+        $("#hero .icon-bar").css("background-color", "white");
     }
 });

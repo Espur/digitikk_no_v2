@@ -1,7 +1,7 @@
 class OrderMailer < ActionMailer::Base
    default to: 'digitikkno@gmail.com'
    
-   def order_email(fornavn, etternavn, email, mobil, tjeneste, beskrivelse)
+    def order_email(fornavn, etternavn, email, mobil, tjeneste, beskrivelse)
        @fornavn = fornavn
        @etternavn = etternavn
        @email = email

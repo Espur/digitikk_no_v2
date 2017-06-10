@@ -26,7 +26,7 @@
     
     $('.annet-tab').click(function() {
         $('.annet-tab').addClass('active');
-        $('.web-tab, grafisk-tab, video-tab').removeClass('active');
+        $('.web-tab, .grafisk-tab, .video-tab').removeClass('active');
         $('#annet-orders').toggle();
         $('#web-orders, #grafisk-orders, #video-orders').hide();
     }); 
@@ -319,8 +319,8 @@
             <h3>Lekker (Websider)</h3>
             <p class="orders-desc-p"><strong>Lekker</strong> pakken passer perfekt til deg som er selvstendig næringsdrivende, privatperson eller driver en mindre virksomhet. Siden vil inneholde all nødvendig informasjon om dine tjenester eller produkter. Samtidig som nettsiden vil ha et interessevekkende design, vil det også være mulig for kunder å kontakte deg gjennom kontaktskjema på mail.</p>
           </div>
-          <div class="col-md-offset-3 col-md-5">
-            <%= image_tag("web_design-min.png", class: 'web-design-icons img-responsive') %>
+          <div class="col-md-offset-3 col-md-5 orders-col-img">
+            <%= image_tag("web_design-min.png", class: 'web-design-icons') %>
           </div>
         </div>
       </div>
@@ -329,8 +329,8 @@
     <div class="container-fluid fabelaktig">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <%= image_tag("macs_edited_new.png", class: 'web-info-mac img-responsive') %>
+          <div class="col-md-4 orders-col-img">
+            <%= image_tag("new_macs_cta.png", class: 'web-info-mac') %>
           </div>
           <div class="col-md-offset-3 col-md-5">
             <h3>Fabelaktig</h3>
@@ -347,8 +347,8 @@
             <h3>Vedlikehold</h3>
             <p class="orders-desc-p">Trenger du vedlikehold eller oppgraderinger på eksisterende nettsted eller sosiale medier? Da hjelper jeg deg gladlig! Beskriv i kontakt skjema nedenfor hvilke utfordringer du ønsker assistanse i, og vi finner en ordning på det.</p>
           </div>
-          <div class="col-md-offset-3 col-md-5">
-            <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac img-responsive') %>
+          <div class="col-md-offset-3 col-md-5 orders-col-img">
+            <%= image_tag("vedlikehold-min.png", class: 'vedlikehold-mac') %>
           </div>
         </div>
       </div>
@@ -535,7 +535,7 @@
             <h3>Logodesign</h3>
             <p class="orders-desc-p">Trenger du logo til din virksomhet? Digitikk.no tilbyr skreddersydde logoer tilpasset dine behov. I tillegg til høyoppløst bitmap grafikk, levers også logoen i nydelig vector grafikk tilpasset print. Logoen designes etter virksomhetens ønsker, og innspill fra designer om ønskelig. Du vil motta en ferdig mappe med ulike versjoner av logoen slik at du kan bruke den på tvers av ulike mediekanaler i forskjellige filformater.</p>
           </div>
-          <div class="col-md-offset-3 col-md-5">
+          <div class="col-md-offset-3 col-md-5 orders-col-img">
             <%= image_tag("Logo_undertext_v2-min.png", class: 'logo-info orders-info-imgs') %>
           </div>
         </div>
@@ -545,8 +545,8 @@
     <div class="container-fluid fabelaktig">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <%= image_tag("profilmanual_ms_ub-min.png", class: 'pm_ms_ub img-responsive') %>
+          <div class="col-md-4 orders-col-img">
+            <%= image_tag("profilmanual_ms_ub-min.png", class: 'pm_ms_ub') %>
           </div>
           <div class="col-md-offset-3 col-md-5">
             <h3>Profilmanual</h3>
@@ -563,7 +563,7 @@
             <h3>Grafisk Profilering</h3>
             <p class="orders-desc-p">Digitikk hjelper gjerne med å designe andre grafiske elementer som visitkort, reklameplakater og promoteringsmateriell. Dette designes i henhold til bedriftens visuelle profil. Ta kontakt, så hjelper jeg deg gjerne!</p>
           </div>
-          <div class="col-md-offset-3 col-md-5">
+          <div class="col-md-offset-3 col-md-5 orders-col-img">
             <%= image_tag("profilering-min.png", class: 'profilering-img') %>
           </div>
         </div>
@@ -733,8 +733,8 @@
             <h3>Videoredigering og Film</h3>
             <p class="orders-desc-p">En appellerende reklame / promoteringsfilm er viktig materiell for din markedsføring. I startfasen utvikles en plan i samarbeid med kunde på hvordan din video skal appelere best mulig til potensielle kunder / målgruppe. Denne planen vil inneholde informasjon om videoens budskap, målgruppe, mediekanal og virkemidler som skal bruers. Videoen leveres i ønsket format tilpasset ønsket kanal. har du allerede film liggende som skal redigeres, tar jeg gjerne i mot dette gjennom nett.</br></br>Digitikk.no baserer seg i Ålesund. Dersom du behøver full produksjon av film-materiell er det bare å ta kontakt for mer informasjon.</p>
           </div>
-          <div class="col-md-offset-3 col-md-5">
-            <%= image_tag("premiere-min.png", class: 'premiere orders-info-imgs img-responsive') %>
+          <div class="col-md-offset-3 col-md-5 orders-col-img">
+            <%= image_tag("premiere-min.png", class: 'premiere orders-info-imgs') %>
           </div>
         </div>
       </div>

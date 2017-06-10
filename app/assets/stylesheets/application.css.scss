@@ -128,7 +128,7 @@ ol li {
 
 
 #hero {
-
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), image-url('header_img.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -137,14 +137,8 @@ ol li {
 
 }
 
-#hero video {
-    width: 100%;
-    z-index: -200;
-    height: 100.2%;
-    min-width: 100% !important;
-    position: absolute;
-    min-height: 100.2%;
-
+#hero .icon-bar {
+    background-color: white;
 }
 
 .nav-logo img {
@@ -871,6 +865,10 @@ i .current {
 
 /* ORDERS PAGE */
 
+.premiere {
+    margin-top: 40px;
+}
+
 
 .usynlig {
     display: none;
@@ -967,7 +965,7 @@ i .current {
 }
 
 .price {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -987,7 +985,7 @@ i .current {
     font-style: italic;
 }
 
-#web-orders td {
+#web-orders td, #grafisk-orders td, #video-orders td {
     font-size: 13px;
 }
 
@@ -1139,44 +1137,21 @@ p.terms {
     
 }
 
-@media only screen and (max-width: 1700px) {
-    
-    .cta-img img {
-        height: 330px;
-    }
-    
-    #hero video {
-        margin-top: -80px;
-    }
-    
-    #about {
-        margin-top: -100px;
-    }
-    
-}
+
 
 @media only screen and (max-width: 1600px) {
     
-    #about h3 {
-        margin-top: 10px
-    }   
+    .cta-text h1 {
+        font-size: 90px;
+    }
+    
+    .cta-text h2 {
+        font-size: 35px;
+    }
     
 }
 
-@media only screen and (max-width: 1580px) {
-    
-    #hero .cta-text {
-        margin-top:  250px;
-    }
-    
-    #hero .cta-text h1 {
-        font-size: 80px;
-    }
-    
-    #hero video {
-        margin-top: -100px;
-    }
-}
+
 
 @media only screen and (max-width: 1500px) {
     
@@ -1185,17 +1160,13 @@ p.terms {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
     }
-}
-
-@media only screen and (max-width: 1509px) {
     
-    #about h3 {
-        margin-top: -80px;
-    }
     
 }
 
-@media only screen and (max-width: 1490px) {
+
+
+@media only screen and (max-width: 1560px) {
     
     #hero .cta-text {
         display: inline-block;
@@ -1203,55 +1174,47 @@ p.terms {
 
     }
     
+    #hero h1 {
+        font-size: 80px;
+    }
+    
+    #hero .cta {
+        margin-top: 70px;
+    }
+    
+    #hero {
+        height: 700px;
+    }
+    
     #hero .cta-img img {
         margin-top: -200px;
 
     }
     
-    #hero video {
-        margin-top: -150px;
-    }
     
-    .premiere {
-        height: 200px;
+    #video-orders-info img {
+        height: 350px;
+        margin-top: 110px;
     }
     
 }
+
 
 
 @media only screen and (max-width: 1300px) {
     
-    #hero video {
-        margin-top: -160px;
+    #video-orders-info img {
+        height: 300px;
+        margin-top: 110px;
     }
     
-    #hero .cta-text {
-        margin-top: 70px;
-    }
-    
-    #hero .cta-img img {
-        margin-top: -100px;
-        height: 290px;
-    }
-    
-    #about h3 {
-        margin-top: -200px;
-    }
     
     
 }
 
-@media only screen and (max-width: 1250px) {
-    
-   #hero video {
-        margin-top: -170px;
-    }
-    
-    #about h3 {
-        margin-top: -200px;
-    }
-    
-}
+
+
+
 
 @media only screen and (max-width: 1218px) {
     
@@ -1262,13 +1225,14 @@ p.terms {
    .cv h5 {
        margin-top: 40px;
    }
+   
+   .price {
+       font-size: 23px;
+   }
 }
 
 @media only screen and (max-width: 1216px) {
     
-    #hero video {
-        margin-top: -180px;
-    }
     
     #hero .cta-text h1 {
         font-size: 70px;
@@ -1289,7 +1253,18 @@ p.terms {
     }
     
     #hero .cta-text {
+        margin-top: 200px;
+        display: block;
+        text-align: center !important;
+    }
+    
+    #hero .cta-img {
+        text-align: center !important;
+    }
+    
+    #hero .cta-img img {
         margin-top: 50px;
+        height: 250px;
     }
     
     #about hr {
@@ -1300,9 +1275,6 @@ p.terms {
         font-size: 12px;
     }
     
-    #services .col-1 {
-        
-    }
     
     #contact li {
         font-size: 13px;
@@ -1310,28 +1282,9 @@ p.terms {
     }
 }
 
-@media only screen and (max-width: 1165px) {
-    
-    #hero video {
-        margin-top: -200px;
-    }
-    
-}
-
-@media only screen and (max-width: 1140px) {
-    
-    #hero .cta-img img {
-        height: 240px;
-    }
-    
-}
-
 
 @media only screen and (max-width: 1080px) {
-    
-    #hero video {
-        margin-top: -220px;
-    }
+
     
     #hero .cta-img img {
         height: 210px;
@@ -1341,13 +1294,16 @@ p.terms {
         padding: 10px 15px;
     }
     
+    #video-orders-info img {
+        height: 250px;
+        margin-top: 110px;
+    }
+    
 }
 
 @media only screen and (max-width: 1027px) {
     
-    #about h3 {
-        margin-top: 210px;
-    }
+
     
     #hero .li-txt {
         font-size: 10px;
@@ -1359,19 +1315,16 @@ p.terms {
         padding-top: 10px;
     }
     
+    #about p {
+        text-align: center !important;
+        font-size: 16px;
+    }
+    
 }
 
 @media only screen and (max-width: 1009px) {
     
-    #hero video {
-        display: none;
-    }
-    
-    #hero .cta-img {
-        text-align: center !important;
-        margin-top: 150px;
-        height: 270px;
-    }
+
     
     #hero {
         background-image: image-url('tjenester-min.png');
@@ -1436,30 +1389,39 @@ p.terms {
     #contact .contact-icons {
         text-align: center !important;
     }
+    
+    
+    
+    .web-design-icons, .logo-info, .profilering-img {
+        margin-top: -140px;
+        margin-bottom: 40px;
+        
+    }
+    
+    .orders-col-img {
+        text-align: center !important;
+    }
+    
+    .vedlikehold-mac {
+        margin-top: -120px;
+    }
+    
+    .orders-hero h1 {
+        text-align: center !important;
+    }
+    
+    
+    #video-orders-info img {
+        height: 400px;
+        margin-top: -100px;
+        margin-bottom: 30px;
+    }
 }
 
 
 @media only screen and (max-width: 785px) {
     
-    .nav-content .li-txt {
-        display: none;
-    }
-    
-    #hero button {
-        display: none;
-    }
-    
-    #hero .nav-logo img {
-        display: none;
-    }
-    
-    #hero .nav-logo {
-        display: none;
-    }
-    
-    nav {
-        display: none;
-    }
+
     
     #icons i {
         margin-top: -40px;
@@ -1492,7 +1454,36 @@ p.terms {
     #about h3 {
         font-size: 50px;
     }
+    
+    #about p {
+        font-size: 14px;
+    }
+    
+    
+    #video-orders-info img {
+        height: 250px;
 
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    
+    #web-orders-info img {
+        height: 290px;
+    }
+    
+    .orders-hero h1 {
+        font-size: 50px;
+        margin-top: 35px;
+    }
+    
+    #nav-tab li a {
+        font-size: 13px;
+    }
+    
 }
 
 
@@ -1516,6 +1507,26 @@ p.terms {
         margin-top: 10px;
     }
     
+    #contact h3 {
+        font-size: 40px;
+    }
+    
+    #contact p {
+        font-size: 13px;
+    }
+    
+    #web-orders-info p, #grafisk-orders-info p, #video-orders-info p, #annet-orders p {
+        font-size: 13px;
+    }
+    
+    #grafisk-orders-info img {
+        height: 270px;
+    }
+    
+    #hero .li-txt {
+        padding: 8px;
+        font-size: 8px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -1524,70 +1535,26 @@ p.terms {
         display: none;
     }
     
-    
-    
-}
-
-
-@media only screen and (max-width: 3500px) {
-    
-    #hero video {
-        margin-top: -740px;
-    }
-    
-    #hero h3 {
-        margin-top: 1000px;
-    }
-    
-    
-    
-    
-}
-
-@media only screen and (max-width: 2600px) {
-    
-    #hero video {
-        margin-top: -350px;
-    }
-    
-    #hero h3 {
-        margin-top: 1000px;
-    }
-    
-    
-    
-    
-}
-
-@media only screen and (max-width: 2300px) {
-    
-    #hero video {
-        margin-top: -150px;
-    }
-    
-    #hero h3 {
-        margin-top: 1000px;
-    }
-    
-    #hero .cta-img img {
-        height: 420px;
+    #about .values-right {
+        float: left !important;
+        margin-bottom: 30px;
     }
     
     
 }
 
-@media only screen and (max-width: 1900px) {
+
+
+@media only screen and (max-width: 400px) {
     
-    #hero video {
-        margin-top: -25px;
+    
+    #web-orders-info img {
+        height: 190px;
     }
     
-    #hero h3 {
-        margin-top: 700px;
-    }
-    
-    #hero .cta-img img {
-        height: 400px;
+    #video-orders-info img {
+        height: 200px;
+
     }
     
     
@@ -1596,98 +1563,4 @@ p.terms {
 
 
 
-/* RESPONSIVE HEIGHT */
 
-
-@media only screen and (max-height: 920px) {
-    
-    #hero .cta-text {
-        margin-top: 50px;
-    }
-    
-    #about h3 {
-        margin-top: -200px;
-    }
-    
-    
-    
-}
-
-
-@media only screen and (max-height: 770px) {
-    
-    #hero .cta-text {
-        margin-top: 20px;
-    }
-    
-    #hero h1 {
-        font-size: 70px;
-    }
-    
-    #hero h2 {
-        font-size: 25px;
-    }
-    
-    #hero .cta-text a {
-        padding: 10px 15px;
-    }
-    
-    #hero video {
-        min-width: 100% !important;
-    }
-    
-
-    
-    
-}
-
-@media only screen and (max-height: 740px) {
-    
-    #hero video {
-        display: none;
-    }
-    
-    #hero {
-        background-image: image-url('tjenester-min.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 650px;
-        background-attachment: fixed;
-    }
-    
-    #about h3 {
-        margin-top: 150px;
-    }
-    
-
-    
-    
-}
-
-@media only screen and (max-height: 800px) {
-    
-    .utvidet-info img {
-        padding-top: 50px;
-    }
-    
-    .orders-desc-p {
-        padding-bottom: 60px;
-    }
-    
-
-    
-    
-}
-
-
-@media only screen and (max-height: 1014px) {
-    
-    #about h3 {
-        margin-top: 100px;
-    }
-    
-
-    
-    
-}

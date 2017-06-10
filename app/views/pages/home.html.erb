@@ -111,8 +111,6 @@
         </div>
     </nav>
     
-    <%= video_tag "Digitikk_header_video_1.mp4", :controls => false, autoplay: :autoplay, loop: :loop, mute: :mute %>
-    
     <div class="container">
         <% flash.each do |key, value| %>
             <%= content_tag :div, value, class: "alert alert-#{key}" %>
@@ -125,7 +123,7 @@
                 <%= link_to "Bestill", new_order_path, class: 'hero-btn-order' %>
             </div>
             <div class="cta-img text-right">
-                <%= image_tag("macs_edited_new.png") %>
+                <%= image_tag("new_macs_cta.png") %>
             </div>
         </div>
     </div>
@@ -286,7 +284,7 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="http://glacial-shore-11468.herokuapp.com/">
+                    <a href="http://glacial-shore-11468.herokuapp.com/" target="_blank">
                         <div class="bg-with-txt dev-match">
                             <%= image_tag("devmatch.png") %>
                             <div class="overlay">
