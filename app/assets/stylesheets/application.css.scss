@@ -452,9 +452,9 @@ a:hover {
     font-weight: 500;
 }
 
-#services .col-1 p, #services .col-2 p, #services .col-3 p, #services .col-md-6 p {
-    font-size: 20px;
-    line-height: 29px;
+#services .col-1 p, #services .col-2 p, #services .col-3 p, #services .col-lg-6 p {
+    font-size: 17px;
+    line-height: 26px;
     font-family: 'Rubik', sans-serif;
     
 }
@@ -497,7 +497,7 @@ a:hover {
 
 
 .drone-solutions {
-    background-image: image-url('web_design.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), image-url('small_drone-min.png');
 }
 
 #services .thumbnail:hover {
