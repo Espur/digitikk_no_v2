@@ -2,6 +2,9 @@ class PagesController < ApplicationController
     def home
         @contact = Contact.new
     end
+    
+    def terms
+    end
         
     def contact
         @contact = Contact.new(contact_params)
